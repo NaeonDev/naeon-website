@@ -3,137 +3,210 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NAEON · One platform. Every operation.</title>
-<meta name="description" content="NAEON is the operations platform for sales, production, stock, delivery, fleet, people and management, with a clear trail of who created, approved and completed every step.">
+<title>NAEON · The operations CRM for companies that make, move and sell</title>
+<meta name="description" content="NAEON is the CRM that runs your whole operation: sales, approvals, stock, dispatch, field reps, the gate and your people, with a clear trail behind every step. Switch on only what you need.">
+<link rel="canonical" href="https://naeon.co.za/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://naeon.co.za/">
 <meta property="og:title" content="NAEON · One platform. Every operation.">
-<meta property="og:description" content="Operations software for sales, production, stock, delivery, fleet and people, with a full trail behind every step.">
+<meta property="og:description" content="The CRM that runs your whole operation, from the sales rep on the road to the truck at the gate.">
+<meta property="og:image" content="https://naeon.co.za/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#07111F">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"NAEON","applicationCategory":"BusinessApplication","operatingSystem":"Web, iOS, Android, Windows, macOS","url":"https://naeon.co.za/","description":"The operations CRM for companies that make, move and sell."}
+</script>
 <style>
-  :root{
-    --bg:#07111F; --bg2:#0B1728; --card:#111F32; --card2:#172A40; --line:#263A50;
-    --blue:#1677FF; --cyan:#00C8F8; --cobalt:#2455E6;
-    --text:#F5F8FC; --text2:#9DADBF; --muted:#6F8195; --green:#24C78E; --amber:#F5B942;
-    --grad:linear-gradient(90deg,#2455E6,#1677FF 50%,#00C8F8);
-    --max:1120px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-  a{color:var(--cyan);text-decoration:none}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+:root{
+  --bg:#07111F;--bg2:#0B1728;--card:#111F32;--card2:#172A40;--line:#263A50;
+  --blue:#1677FF;--cyan:#00C8F8;--cobalt:#2455E6;
+  --text:#F5F8FC;--text2:#9DADBF;--muted:#6F8195;--green:#24C78E;--amber:#F5B942;
+  --grad:linear-gradient(90deg,#2455E6,#1677FF 50%,#00C8F8);
+  --max:1160px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--cyan);text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
 
-  /* Header */
-  header{position:sticky;top:0;z-index:10;background:rgba(7,17,31,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
-  .links{display:flex;gap:28px;align-items:center}
-  .links a.l{color:var(--text2);font-size:15px;font-weight:500}
-  .links a.l:hover{color:var(--text)}
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.links{display:flex;gap:26px;align-items:center}
+.links a.l{color:var(--text2);font-size:15px;font-weight:500}
+.links a.l:hover{color:var(--text)}
+.logo{display:flex;align-items:center;font-weight:800;font-size:22px;letter-spacing:.14em;color:var(--text)}
+.logo .e{display:inline-flex;flex-direction:column;justify-content:space-between;width:.62em;height:.72em;margin:0 .14em 0 .04em}
+.logo .e i{display:block;height:20%;border-radius:1px}
+.logo .e i:nth-child(1){background:var(--cyan)}.logo .e i:nth-child(2){background:var(--blue);width:82%}.logo .e i:nth-child(3){background:var(--cobalt)}
 
-  /* Logo */
-  .logo{display:flex;align-items:center;font-weight:800;font-size:22px;letter-spacing:.14em;color:var(--text)}
-  .logo .e{display:inline-flex;flex-direction:column;justify-content:space-between;width:.62em;height:.72em;margin:0 .14em 0 .04em}
-  .logo .e i{display:block;height:20%;border-radius:1px}
-  .logo .e i:nth-child(1){background:var(--cyan)}
-  .logo .e i:nth-child(2){background:var(--blue);width:82%}
-  .logo .e i:nth-child(3){background:var(--cobalt)}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:46px;padding:0 22px;border-radius:10px;font-weight:600;font-size:15px;transition:transform .15s,background .15s;white-space:nowrap;cursor:pointer}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:#2a85ff}
+.btn-grad{background:var(--grad);color:#fff}
+.btn-secondary{border:1px solid var(--blue);color:var(--text)}.btn-secondary:hover{background:rgba(22,119,255,.12)}
+.btn-ghost{color:var(--text2)}.btn-ghost:hover{color:var(--text)}
+.btn-sm{height:38px;padding:0 16px;font-size:14px}
 
-  /* Buttons */
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 20px;border-radius:10px;font-weight:600;font-size:15px;transition:transform .15s,background .15s,border-color .15s;white-space:nowrap}
-  .btn:hover{transform:translateY(-1px)}
-  .btn-primary{background:var(--blue);color:#fff}
-  .btn-primary:hover{background:#2a85ff}
-  .btn-secondary{border:1px solid var(--blue);color:var(--text)}
-  .btn-secondary:hover{background:rgba(22,119,255,.12)}
-  .btn-sm{height:38px;padding:0 16px;font-size:14px}
+/* hero */
+.hero{position:relative;padding:84px 0 0;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-200px;top:-260px;width:900px;height:900px;background:radial-gradient(closest-side,rgba(22,119,255,.22),transparent 70%);pointer-events:none}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text2)}
+.bars{display:inline-flex;flex-direction:column;gap:3px}.bars i{display:block;width:18px;height:3px;border-radius:2px}
+.bars i:nth-child(1){background:var(--cyan)}.bars i:nth-child(2){background:var(--blue)}.bars i:nth-child(3){background:var(--cobalt)}
+h1{font-size:clamp(38px,5.6vw,66px);line-height:1.06;font-weight:800;letter-spacing:-.03em;margin:20px 0 22px;max-width:17ch}
+.gt{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(17px,2vw,20px);color:var(--text2);max-width:60ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.small{font-size:14px;color:var(--muted);margin-top:14px}
 
-  /* Hero */
-  .hero{position:relative;overflow:hidden;padding:96px 0 88px;border-bottom:1px solid var(--line)}
-  .hero:before{content:"";position:absolute;inset:-40% -10% auto auto;width:720px;height:720px;background:radial-gradient(closest-side,rgba(22,119,255,.22),transparent 70%);pointer-events:none}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text2)}
-  .bars{display:inline-flex;flex-direction:column;gap:3px}
-  .bars i{display:block;width:18px;height:3px;border-radius:2px}
-  .bars i:nth-child(1){background:var(--cyan)}.bars i:nth-child(2){background:var(--blue)}.bars i:nth-child(3){background:var(--cobalt)}
-  h1{font-size:clamp(38px,6vw,64px);line-height:1.08;font-weight:800;letter-spacing:-.025em;margin:20px 0 22px;max-width:15ch}
-  h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .lead{font-size:clamp(17px,2vw,20px);color:var(--text2);max-width:58ch}
-  .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+/* product frames */
+.stage{position:relative;margin-top:64px;padding-bottom:0}
+.browser{border:1px solid var(--line);border-radius:14px 14px 0 0;overflow:hidden;background:var(--bg2);box-shadow:0 -20px 80px rgba(22,119,255,.18)}
+.browser .bar{height:34px;display:flex;align-items:center;gap:7px;padding:0 14px;border-bottom:1px solid var(--line);background:#0d1a2c}
+.browser .bar i{width:10px;height:10px;border-radius:50%;background:#263A50}
+.browser .bar span{margin-left:14px;font-size:12px;color:var(--muted);background:#07111F;border-radius:6px;padding:2px 12px}
+.phone{border:8px solid #1a2a40;border-radius:34px;overflow:hidden;background:#000;box-shadow:0 30px 60px rgba(0,0,0,.55)}
+.stage .phone{position:absolute;right:4%;bottom:-40px;width:23%;min-width:150px}
+.stage-fade{height:80px;background:linear-gradient(transparent,var(--bg));margin-top:-80px;position:relative;z-index:2}
 
-  /* Sections */
-  section{padding:88px 0}
-  .alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  h2{font-size:clamp(28px,4vw,40px);line-height:1.15;font-weight:800;letter-spacing:-.02em;margin-bottom:14px}
-  .sub{color:var(--text2);font-size:17px;max-width:62ch;margin-bottom:44px}
+/* trust strip */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);position:relative;z-index:3}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:26px;padding-bottom:26px}
+.strip div{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--text2)}
+.strip b{display:block;color:var(--text);font-size:15px}
+.strip svg{flex:none;width:22px;height:22px;stroke:var(--cyan);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
 
-  /* Module grid */
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
-  .card h3{font-size:18px;font-weight:700;margin:14px 0 8px}
-  .card p{color:var(--text2);font-size:15px}
-  .ico{width:40px;height:40px;border-radius:10px;background:rgba(22,119,255,.14);display:grid;place-items:center}
-  .ico svg{width:22px;height:22px;stroke:var(--blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+/* sections */
+section{padding:96px 0}
+.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:12px}
+h2{font-size:clamp(28px,4vw,42px);line-height:1.12;font-weight:800;letter-spacing:-.02em;margin-bottom:14px;max-width:24ch}
+.sub{color:var(--text2);font-size:17px;max-width:62ch;margin-bottom:48px}
 
-  /* How it works */
-  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-  .points{list-style:none;display:grid;gap:22px}
-  .points li{display:grid;grid-template-columns:28px 1fr;gap:14px}
-  .points b{display:block;font-size:16px;margin-bottom:2px}
-  .points span{color:var(--text2);font-size:15px}
-  .tick{width:28px;height:28px;border-radius:50%;background:rgba(36,199,142,.14);display:grid;place-items:center;margin-top:1px}
-  .tick svg{width:15px;height:15px;stroke:var(--green);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+/* feature rows */
+.feat{display:grid;grid-template-columns:1fr 1.25fr;gap:64px;align-items:center;padding:44px 0;border-top:1px solid rgba(38,58,80,.6)}
+.feat:first-of-type{border-top:0;padding-top:0}
+.feat.rev .txt{order:2}
+.feat h3{font-size:26px;line-height:1.2;font-weight:800;letter-spacing:-.01em;margin:10px 0 12px}
+.feat p{color:var(--text2);font-size:16px}
+.feat ul{list-style:none;margin-top:18px;display:grid;gap:10px}
+.feat li{display:flex;gap:10px;font-size:15px;color:var(--text)}
+.feat li:before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--cyan);margin-top:9px}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#7fb4ff;background:rgba(22,119,255,.14);border-radius:999px;padding:4px 10px}
+.shot{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg2);box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.duo{position:relative}
+.duo .phone{position:absolute;width:34%;right:-10px;bottom:-30px}
 
-  /* Trail mock */
-  .trail{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
-  .trail-h{display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:6px}
-  .trail-h b{font-size:15px}
-  .pill{font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px}
-  .p-green{background:rgba(36,199,142,.14);color:var(--green)}
-  .p-blue{background:rgba(22,119,255,.16);color:#5ea2ff}
-  .p-amber{background:rgba(245,185,66,.14);color:var(--amber)}
-  .step{display:grid;grid-template-columns:14px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid rgba(38,58,80,.6)}
-  .step:last-child{border-bottom:0}
-  .dot{width:10px;height:10px;border-radius:50%;margin-top:6px;background:var(--blue)}
-  .step .w{font-size:14px;font-weight:600}
-  .step .m{font-size:13px;color:var(--muted)}
+/* add-ons */
+.addons{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.addon{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:4px}
+.addon b{font-size:15px}
+.addon span{font-size:13px;color:var(--muted)}
+.addon.core{border-color:rgba(22,119,255,.5)}
+.addon .pill{align-self:flex-start;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;margin-bottom:6px}
+.p-core{background:rgba(22,119,255,.16);color:#7fb4ff}
+.p-add{background:rgba(157,173,191,.12);color:var(--text2)}
+.p-soon{background:rgba(245,185,66,.14);color:var(--amber)}
 
-  /* Downloads */
-  .dl{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .platform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:14px}
-  .platform .top{display:flex;align-items:center;gap:12px}
-  .platform svg{width:26px;height:26px;fill:var(--text)}
-  .platform b{font-size:16px}
-  .platform small{display:block;color:var(--muted);font-size:13px}
-  .soon{display:inline-flex;align-items:center;justify-content:center;height:38px;border-radius:9px;border:1px dashed var(--line);color:var(--text2);font-size:14px;font-weight:600}
-  .note{margin-top:22px;color:var(--text2);font-size:15px}
+/* trail */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.trail{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.trail-h{display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:6px}
+.pill2{font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:rgba(36,199,142,.14);color:var(--green)}
+.step{display:grid;grid-template-columns:14px 1fr auto;gap:14px;padding:14px 0;border-bottom:1px solid rgba(38,58,80,.6)}
+.step:last-child{border-bottom:0}
+.dot{width:10px;height:10px;border-radius:50%;margin-top:6px;background:var(--blue)}
+.step .w{font-size:14px;font-weight:600}.step .m{font-size:13px;color:var(--muted)}
+.points{list-style:none;display:grid;gap:20px}
+.points li{display:grid;grid-template-columns:28px 1fr;gap:14px}
+.points b{display:block;font-size:16px}.points span{color:var(--text2);font-size:15px}
+.tick{width:28px;height:28px;border-radius:50%;background:rgba(36,199,142,.14);display:grid;place-items:center}
+.tick svg{width:15px;height:15px;stroke:var(--green);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
 
-  /* Contact */
-  .contact{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:48px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;position:relative;overflow:hidden}
-  .contact:before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:var(--grad)}
-  .person{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:24px}
-  .person .role{color:var(--text2);font-size:14px}
-  .person .name{font-size:20px;font-weight:700;margin:2px 0 14px}
-  .person .num{font-size:24px;font-weight:700;letter-spacing:.02em;margin-bottom:18px}
-  .person .acts{display:flex;gap:10px;flex-wrap:wrap}
+/* industries */
+.inds{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ind{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;position:relative}
+.ind h3{font-size:20px;margin:14px 0 8px}
+.ind p{color:var(--text2);font-size:15px}
+.ind ul{list-style:none;margin-top:14px;display:grid;gap:6px;font-size:14px;color:var(--text2)}
+.ind li:before{content:"→ ";color:var(--cyan)}
+.ico{width:44px;height:44px;border-radius:11px;background:rgba(22,119,255,.14);display:grid;place-items:center}
+.ico svg{width:24px;height:24px;stroke:var(--blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ind .soon{position:absolute;top:24px;right:24px}
 
-  footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:14px}
-  .foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+.st{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;counter-increment:s}
+.st:before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--grad);font-weight:800;margin-bottom:14px}
+.st b{display:block;font-size:16px;margin-bottom:4px}.st span{color:var(--text2);font-size:14px}
 
-  @media (max-width:920px){
-    .grid{grid-template-columns:repeat(2,1fr)}
-    .dl{grid-template-columns:repeat(2,1fr)}
-    .split,.contact{grid-template-columns:1fr}
-    .contact{padding:32px 24px}
-  }
-  @media (max-width:640px){
-    .links a.l{display:none}
-    .grid,.dl{grid-template-columns:1fr}
-    .hero{padding:64px 0 60px}
-    section{padding:64px 0}
-    .cta .btn{flex:1}
-  }
+/* download */
+.dl{display:grid;grid-template-columns:1.2fr repeat(4,1fr);gap:14px}
+.platform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.platform .top{display:flex;align-items:center;gap:12px}
+.platform svg{width:26px;height:26px;fill:var(--text)}
+.platform b{font-size:16px}.platform small{display:block;color:var(--muted);font-size:13px}
+.platform.web{border-color:rgba(22,119,255,.55);background:linear-gradient(160deg,rgba(22,119,255,.14),var(--card) 60%)}
+.soonb{display:inline-flex;align-items:center;justify-content:center;height:38px;border-radius:9px;border:1px dashed var(--line);color:var(--text2);font-size:14px;font-weight:600}
+
+/* faq */
+.faq{display:grid;gap:10px;max-width:860px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 22px}
+summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:700;font-size:16px;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--cyan);font-size:22px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{color:var(--text2);font-size:15px;padding:0 0 20px}
+
+/* contact */
+.contact{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:52px;display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:center;position:relative;overflow:hidden}
+.contact:before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:var(--grad)}
+.person{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:26px}
+.person .role{color:var(--text2);font-size:14px}
+.person .name{font-size:21px;font-weight:700;margin:2px 0 12px}
+.person .num{font-size:24px;font-weight:700;letter-spacing:.02em}
+.person .mail{display:block;font-size:16px;margin:4px 0 20px}
+.acts{display:flex;gap:10px;flex-wrap:wrap}
+.demo-list{list-style:none;display:grid;gap:10px;margin-top:22px;color:var(--text2);font-size:15px}
+.demo-list li{display:flex;gap:10px}.demo-list li:before{content:"✓";color:var(--green);font-weight:800}
+
+footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--muted);font-size:14px}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:28px}
+.foot h4{color:var(--text);font-size:14px;margin-bottom:10px}
+.foot a{display:block;color:var(--text2);margin-bottom:6px}
+.legal{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.todo{background:rgba(245,185,66,.16);color:var(--amber);border-radius:4px;padding:0 4px}
+
+@media (max-width:980px){
+  .feat,.split,.contact{grid-template-columns:1fr;gap:36px}
+  .feat.rev .txt{order:0}
+  .addons{grid-template-columns:repeat(2,1fr)}
+  .inds,.steps{grid-template-columns:1fr 1fr}
+  .dl{grid-template-columns:repeat(2,1fr)}
+  .dl .web{grid-column:1/-1}
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .foot{grid-template-columns:1fr 1fr}
+  .contact{padding:32px 24px}
+}
+@media (max-width:640px){
+  .links a.l,.links .btn-ghost{display:none}
+  .addons,.inds,.steps{grid-template-columns:1fr}
+  .strip .wrap{grid-template-columns:1fr}
+  .hero{padding-top:56px}
+  section{padding:68px 0}
+  .cta .btn{flex:1}
+  .stage .phone{width:34%;right:2%;bottom:-24px;border-width:5px;border-radius:22px}
+  .duo .phone{width:40%;right:-4px;border-width:5px;border-radius:22px}
+  .foot{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -143,127 +216,290 @@
     <a href="#" class="logo" aria-label="NAEON home">NA<span class="e" aria-hidden="true"><i></i><i></i><i></i></span>ON</a>
     <nav class="links">
       <a class="l" href="#platform">Platform</a>
-      <a class="l" href="#how">How it works</a>
+      <a class="l" href="#industries">Industries</a>
+      <a class="l" href="#faq">FAQ</a>
       <a class="l" href="#download">Download</a>
-      <a class="btn btn-secondary btn-sm" href="https://app.naeon.co.za">Sign in</a>
+      <a class="btn btn-ghost btn-sm" href="https://app.naeon.co.za">Sign in</a>
+      <a class="btn btn-primary btn-sm" href="#contact">Book a demo</a>
     </nav>
   </div>
 </header>
 
 <main>
+  <!-- HERO -->
   <section class="hero">
     <div class="wrap">
-      <div class="eyebrow"><span class="bars"><i></i><i></i><i></i></span>Operations software · Made in South Africa</div>
-      <h1>One platform. <span>Every operation.</span></h1>
-      <p class="lead">NAEON brings sales, production, stock, delivery, fleet and your people into one place, with a clear record of who created, approved and completed every step.</p>
+      <div class="eyebrow"><span class="bars"><i></i><i></i><i></i></span>The operations CRM · Made in South Africa</div>
+      <h1>The CRM that runs your <span class="gt">whole operation.</span></h1>
+      <p class="lead">From the sales rep on the road to the truck at the gate. NAEON brings sales, approvals, stock, dispatch, your field team and your people into one app, with a clear record of who did what, and when.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="#contact">Talk to sales</a>
+        <a class="btn btn-grad" href="#contact">Book a demo</a>
         <a class="btn btn-secondary" href="#platform">See the platform</a>
       </div>
+      <p class="small">Switch on only what you need. Works on phone, tablet and computer.</p>
+
+      <div class="stage">
+        <div class="browser">
+          <div class="bar"><i></i><i></i><i></i><span>app.naeon.co.za</span></div>
+          <img src="img/hero-desktop.jpg" width="1200" height="750" alt="NAEON management home: approvals waiting, sales, cash collected, staff on site and the weekly summary">
+        </div>
+        <div class="phone"><img src="img/hero-phone.jpg" width="390" height="780" alt="NAEON on a sales rep's phone: leads, open quotes, monthly target and quick actions"></div>
+      </div>
     </div>
+    <div class="stage-fade"></div>
   </section>
 
+  <div class="strip">
+    <div class="wrap">
+      <div><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M17.5 14v7M14 17.5h7"/></svg><span><b>Every feature is an add-on</b>Pay for what you use, nothing more</span></div>
+      <div><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h9"/></svg><span><b>A trail behind every entry</b>Created, approved, done, by whom</span></div>
+      <div><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg><span><b>Built for phones first</b>For reps, drivers and the factory floor</span></div>
+      <div><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/></svg><span><b>Your data, your rules</b>You decide who sees what, and for how long</span></div>
+    </div>
+  </div>
+
+  <!-- PLATFORM -->
   <section id="platform">
     <div class="wrap">
-      <h2>Everything your operation runs on</h2>
-      <p class="sub">Switch on the modules you need and leave the rest off. Every company builds the NAEON that fits the way it works.</p>
-      <div class="grid">
-        <div class="card">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
-          <h3>Sales</h3>
-          <p>Agents, customers, products, quote requests and orders. Requests go to the sales manager and management for sign-off.</p>
+      <div class="kicker">The platform</div>
+      <h2>One app for every department</h2>
+      <p class="sub">Most companies run on spreadsheets, WhatsApp groups and paper slips. NAEON replaces the chasing with one place where work is captured, approved and followed through.</p>
+
+      <div class="feat">
+        <div class="txt">
+          <span class="tag">Sales &amp; CRM</span>
+          <h3>Know every customer, every quote, every promise</h3>
+          <p>Leads, customers, quote requests and orders in one place, with the full story of each customer on a single timeline.</p>
+          <ul>
+            <li>Quote requests signed off by the sales manager or management</li>
+            <li>Price agreements, complaints and a contact log per customer</li>
+            <li>RFQs sent to finance land with the right rep automatically</li>
+            <li>Monthly targets, visit goals and follow-up reminders</li>
+          </ul>
         </div>
-        <div class="card">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M4 20V9l5 3V9l5 3V5h6v15"/></svg></div>
-          <h3>Production</h3>
-          <p>Plan and track production runs from start to finish, including quality checks and what's in progress right now.</p>
+        <div class="shot"><img src="img/sales-timeline.jpg" width="1024" height="700" loading="lazy" alt="A customer's timeline in NAEON: quote requests, complaints and payment promises"></div>
+      </div>
+
+      <div class="feat rev">
+        <div class="txt">
+          <span class="tag">Approvals</span>
+          <h3>Approvals that don't wait for someone to be at their desk</h3>
+          <p>Leave, expenses, quotes, purchases and visitors all arrive in one inbox, on any device. Approve in a tap, or several at once.</p>
+          <ul>
+            <li>Nobody can approve their own request</li>
+            <li>Bulk approve routine items, with flagged ones held back</li>
+            <li>Withdraw, fix and resubmit, showing exactly what changed</li>
+          </ul>
         </div>
-        <div class="card">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></div>
-          <h3>Stock</h3>
-          <p>Raw materials and finished goods, with low-stock warnings before they turn into a problem.</p>
+        <div class="shot"><img src="img/approvals.jpg" width="1200" height="750" loading="lazy" alt="NAEON approvals inbox with expense claims, fuel slips and policies waiting"></div>
+      </div>
+
+      <div class="feat">
+        <div class="txt">
+          <span class="tag">Stock, dispatch &amp; delivery</span>
+          <h3>From the warehouse shelf to the customer's signature</h3>
+          <p>Raw materials and finished goods, purchase orders, picking, loading and delivery, with low-stock warnings before they cost you a sale.</p>
+          <ul>
+            <li>Purchase requests, supplier quotes and goods received</li>
+            <li>Dispatch board, picking lists and truck load checks</li>
+            <li>Proof of delivery captured on the driver's phone</li>
+          </ul>
         </div>
-        <div class="card">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M1 6h13v10H1z"/><path d="M14 10h4l3 3v3h-7"/><circle cx="5.5" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></svg></div>
-          <h3>Delivery &amp; fleet</h3>
-          <p>Deliveries with proof of delivery, kilometres travelled by reps while clocked in, and fuel slips captured by photo.</p>
+        <div class="duo">
+          <div class="shot"><img src="img/dispatch.jpg" width="1024" height="700" loading="lazy" alt="NAEON dispatch board with orders ready, on the road and delivered"></div>
+          <div class="phone"><img src="img/pod.jpg" width="390" height="780" loading="lazy" alt="Proof of delivery on a driver's phone"></div>
         </div>
-        <div class="card">
-          <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 15h3"/></svg></div>
-          <h3>Finance tracking</h3>
-          <p>Approved quote figures, purchase order approvals, payments and invoice status, alongside the systems you already use.</p>
+      </div>
+
+      <div class="feat rev">
+        <div class="txt">
+          <span class="tag">Field team &amp; the gate</span>
+          <h3>Reps on the road, visitors at the gate, all accounted for</h3>
+          <p>Kilometres travelled while clocked in, fuel slips photographed on the spot, and a gate that knows who's on site.</p>
+          <ul>
+            <li>Rep tracking only while clocked in</li>
+            <li>Fuel slips and mileage captured per vehicle</li>
+            <li>Visitors logged at the gate, with reception notified</li>
+            <li>Emergency roll call in one tap</li>
+          </ul>
         </div>
-        <div class="card">
-          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6"/><path d="M16 4.5a3.5 3.5 0 010 7"/><path d="M19 14c1.9.8 3 2.9 3 6"/></svg></div>
-          <h3>People &amp; security</h3>
-          <p>Employee onboarding with personal sign-in codes, HR and policy files, and gate visitor logs that notify reception.</p>
+        <div class="duo">
+          <div class="shot"><img src="img/gate-desk.jpg" width="1024" height="700" loading="lazy" alt="NAEON security gate: visitors, contractors and trucks on site"></div>
+          <div class="phone"><img src="img/fuel.jpg" width="390" height="780" loading="lazy" alt="Logging a fuel slip on a rep's phone"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="how" class="alt">
+  <!-- ADD-ONS -->
+  <section class="alt" id="addons">
+    <div class="wrap">
+      <div class="kicker">Build your NAEON</div>
+      <h2>Start with what you need. Add the rest when you're ready.</h2>
+      <p class="sub">Every module is optional. Switch features on or off at any time, and NAEON changes with your company instead of the other way round.</p>
+      <div class="addons">
+        <div class="addon core"><span class="pill p-core">Core</span><b>Sales &amp; customers</b><span>Leads, quotes, orders, targets</span></div>
+        <div class="addon core"><span class="pill p-core">Core</span><b>Approvals inbox</b><span>One place for every sign-off</span></div>
+        <div class="addon core"><span class="pill p-core">Core</span><b>People &amp; HR</b><span>Leave, expenses, HR files, policies</span></div>
+        <div class="addon core"><span class="pill p-core">Core</span><b>Management pulse</b><span>Every department at a glance</span></div>
+        <div class="addon"><span class="pill p-add">Add-on</span><b>Price agreements</b><span>Agreed prices per customer</span></div>
+        <div class="addon"><span class="pill p-add">Add-on</span><b>Contact log &amp; complaints</b><span>Customer timeline and escalation</span></div>
+        <div class="addon"><span class="pill p-add">Add-on</span><b>Rep tracking</b><span>Kilometres and visits</span></div>
+        <div class="addon"><span class="pill p-add">Add-on</span><b>Fuel &amp; travel</b><span>Fuel slips and mileage</span></div>
+        <div class="addon"><span class="pill p-add">Add-on</span><b>Procurement</b><span>Purchases, suppliers, receiving</span></div>
+        <div class="addon"><span class="pill p-add">Add-on</span><b>Warehouse &amp; dispatch</b><span>Stock, picking, loading</span></div>
+        <div class="addon"><span class="pill p-add">Add-on</span><b>Proof of delivery</b><span>Signatures and photos</span></div>
+        <div class="addon"><span class="pill p-add">Add-on</span><b>Security gate</b><span>Visitors, contractors, trucks</span></div>
+        <div class="addon"><span class="pill p-add">Add-on</span><b>Reception</b><span>Visitors and parcels</span></div>
+        <div class="addon"><span class="pill p-add">Add-on</span><b>Health &amp; safety</b><span>Incidents and roll call</span></div>
+        <div class="addon"><span class="pill p-add">Add-on</span><b>Announcements</b><span>With read receipts</span></div>
+        <div class="addon"><span class="pill p-add">Add-on</span><b>AI &amp; WhatsApp</b><span>Slip reading, alerts, summaries</span></div>
+        <div class="addon"><span class="pill p-soon">Coming soon</span><b>Production &amp; quality</b><span>Runs, QC and maintenance</span></div>
+        <div class="addon"><span class="pill p-soon">Coming soon</span><b>Shifts &amp; training</b><span>Shift planning, training matrix</span></div>
+        <div class="addon"><span class="pill p-soon">Coming soon</span><b>Fleet checks &amp; trips</b><span>Vehicle checks and trip logs</span></div>
+        <div class="addon"><span class="pill p-soon">Coming soon</span><b>Logistics</b><span>For transport companies</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAIL -->
+  <section id="how">
     <div class="wrap split">
       <div>
+        <div class="kicker">How it works</div>
         <h2>Built to run alongside your systems</h2>
-        <p class="sub" style="margin-bottom:34px">NAEON doesn't replace your accounting package or your email. It's the place your team records, approves and follows through on the work.</p>
+        <p class="sub" style="margin-bottom:34px">NAEON doesn't replace your accounting package. It's where your team records, approves and follows through on the work, and finance takes the approved figures into your own system.</p>
         <ul class="points">
-          <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>A trail behind every entry</b><span>See who created it, who approved it, and whether it was carried out and completed.</span></div></li>
-          <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Management sees everything</b><span>One view across every department, without chasing updates.</span></div></li>
-          <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Your company, your setup</b><span>Your logo and colour, the modules you choose, and the roles your team actually has.</span></div></li>
-          <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Secure sign-in for every employee</b><span>Office staff sign in by email, factory and warehouse staff with a personal activation code.</span></div></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>A trail behind every entry</b><span>See who created it, who approved it, and whether it was carried out.</span></div></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Management sees everything</b><span>One live view across every department, without chasing updates.</span></div></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Your company, your setup</b><span>Your logo and colour, your roles, and the modules you choose.</span></div></li>
         </ul>
       </div>
       <div class="trail" aria-hidden="true">
-        <div class="trail-h"><b>Quote request #1042</b><span class="pill p-green">Completed</span></div>
-        <div class="step"><span class="dot" style="background:var(--muted)"></span><div><div class="w">Created by sales rep</div><div class="m">Customer request captured on the road</div></div><span class="m">08:14</span></div>
+        <div class="trail-h"><b>Quote request QR-00042</b><span class="pill2">Completed</span></div>
+        <div class="step"><span class="dot" style="background:var(--muted)"></span><div><div class="w">Created by sales rep</div><div class="m">Captured at the customer's site</div></div><span class="m">08:14</span></div>
         <div class="step"><span class="dot" style="background:var(--amber)"></span><div><div class="w">Sent for approval</div><div class="m">Sales manager and management notified</div></div><span class="m">08:15</span></div>
         <div class="step"><span class="dot"></span><div><div class="w">Approved by sales manager</div><div class="m">Figures released to finance</div></div><span class="m">09:02</span></div>
-        <div class="step"><span class="dot" style="background:var(--green)"></span><div><div class="w">Quote sent by finance</div><div class="m">Marked complete, rep can follow up</div></div><span class="m">10:30</span></div>
+        <div class="step"><span class="dot" style="background:var(--green)"></span><div><div class="w">Quote sent by finance</div><div class="m">Rep notified to follow up</div></div><span class="m">10:30</span></div>
       </div>
     </div>
   </section>
 
-  <section id="download">
+  <!-- INDUSTRIES -->
+  <section class="alt" id="industries">
     <div class="wrap">
-      <h2>Download NAEON</h2>
-      <p class="sub">NAEON will be available on phones, tablets and computers. The apps are on their way.</p>
+      <div class="kicker">Industries</div>
+      <h2>Made for companies that make, move and sell</h2>
+      <p class="sub">If your work involves a sales team, a warehouse, a gate and people in the field, NAEON was built for you.</p>
+      <div class="inds">
+        <div class="ind">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M4 20V9l5 3V9l5 3V5h6v15"/></svg></div>
+          <h3>Manufacturing</h3>
+          <p>Factories with a sales team, raw materials and a production floor.</p>
+          <ul><li>Stock and procurement</li><li>Shop-floor staff on activation codes</li><li>Safety, incidents and roll call</li></ul>
+        </div>
+        <div class="ind">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></div>
+          <h3>Distribution &amp; wholesale</h3>
+          <p>Companies selling and delivering from one or more warehouses.</p>
+          <ul><li>Reps on the road with targets</li><li>Picking, dispatch and proof of delivery</li><li>Price agreements per customer</li></ul>
+        </div>
+        <div class="ind">
+          <span class="pill p-soon soon" style="font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px">Coming soon</span>
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M1 6h13v10H1z"/><path d="M14 10h4l3 3v3h-7"/><circle cx="5.5" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></svg></div>
+          <h3>Logistics &amp; transport</h3>
+          <p>Fleets, drivers and loads, with vehicle tracker connections.</p>
+          <ul><li>Trips and fleet checks</li><li>Driver apps and delivery proof</li><li>Tracker integration</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET STARTED -->
+  <section>
+    <div class="wrap">
+      <div class="kicker">Getting started</div>
+      <h2>Up and running without the headache</h2>
+      <p class="sub">We set NAEON up for you. Your team just signs in.</p>
+      <div class="steps">
+        <div class="st"><b>See it working</b><span>A live demo company with every role, so you can see each person's view.</span></div>
+        <div class="st"><b>Choose your modules</b><span>Pick the add-ons that fit. Change them any time.</span></div>
+        <div class="st"><b>We set you up</b><span>Send us your staff list on our template, and we load your company with your logo and colour.</span></div>
+        <div class="st"><b>Your team signs in</b><span>Office staff get an email invite. Factory and warehouse staff get a personal activation code.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section class="alt" id="download">
+    <div class="wrap">
+      <div class="kicker">Download</div>
+      <h2>On every device your team uses</h2>
+      <p class="sub">Use NAEON in your browser today. Installable apps for phones and computers are on their way.</p>
       <div class="dl">
+        <div class="platform web">
+          <div class="top"><svg viewBox="0 0 24 24" style="fill:none;stroke:var(--cyan);stroke-width:1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg><div><b>Web app</b><small>Any browser, available now</small></div></div>
+          <a class="btn btn-primary btn-sm" href="https://app.naeon.co.za">Open NAEON</a>
+        </div>
         <div class="platform">
           <div class="top"><svg viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.4.8 2.2-1.3 3.1-2.5c1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.9 5c.7-.8 1.2-2 1-3.2-1 0-2.3.7-3 1.5-.7.7-1.3 1.9-1.1 3.1 1.2.1 2.4-.6 3.1-1.4z"/></svg><div><b>iPhone &amp; iPad</b><small>App Store</small></div></div>
-          <span class="soon">Coming soon</span>
+          <span class="soonb">Coming soon</span>
         </div>
         <div class="platform">
           <div class="top"><svg viewBox="0 0 24 24"><path d="M17.5 9.4l1.6-2.8c.1-.2 0-.4-.2-.5s-.4 0-.5.2l-1.6 2.8C15.6 8.4 13.9 8 12 8s-3.6.4-4.8 1.1L5.6 6.3c-.1-.2-.3-.3-.5-.2s-.3.3-.2.5l1.6 2.8C3.8 10.9 2 13.6 2 16.7h20c0-3.1-1.8-5.8-4.5-7.3zM7.5 14.2c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9zm9 0c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9z"/></svg><div><b>Android</b><small>Direct download</small></div></div>
-          <span class="soon">Coming soon</span>
+          <span class="soonb">Coming soon</span>
         </div>
         <div class="platform">
           <div class="top"><svg viewBox="0 0 24 24"><path d="M3 5.5l7.4-1v7.1H3V5.5zm0 13l7.4 1v-7H3v6zm8.3 1.1L21 21v-8.4h-9.7v7zm0-15.2v7.2H21V3l-9.7 1.4z"/></svg><div><b>Windows</b><small>Direct download</small></div></div>
-          <span class="soon">Coming soon</span>
+          <span class="soonb">Coming soon</span>
         </div>
         <div class="platform">
-          <div class="top"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" style="fill:none;stroke:var(--text)"/><path d="M8 20h8" style="fill:none;stroke:var(--text);stroke-width:1.8;stroke-linecap:round"/></svg><div><b>Mac</b><small>App Store</small></div></div>
-          <span class="soon">Coming soon</span>
+          <div class="top"><svg viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.4.8 2.2-1.3 3.1-2.5c1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.9 5c.7-.8 1.2-2 1-3.2-1 0-2.3.7-3 1.5-.7.7-1.3 1.9-1.1 3.1 1.2.1 2.4-.6 3.1-1.4z"/></svg><div><b>Mac</b><small>Mac App Store</small></div></div>
+          <span class="soonb">Coming soon</span>
         </div>
       </div>
-      <p class="note">Want NAEON for your company when it launches? <a href="#contact">Get in touch</a> and we'll set you up first.</p>
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="kicker">Questions</div>
+      <h2>Things people usually ask</h2>
+      <div class="faq" style="margin-top:34px">
+        <details><summary>Does NAEON replace our accounting system?</summary><p>No. NAEON runs alongside it. Your team captures and approves work in NAEON, and finance uses the approved figures in your own accounting system. Tax invoices, credit notes and statements stay there.</p></details>
+        <details><summary>Can we start with only a few modules?</summary><p>Yes. Every feature beyond the core is an optional add-on. Start small, and switch more on when you're ready. You only pay for what you use.</p></details>
+        <details><summary>Does it work on phones?</summary><p>Yes. NAEON was designed for phones first, for reps, drivers, security and factory staff, and it works just as well on tablets and computers.</p></details>
+        <details><summary>How do our staff get access?</summary><p>You send us your staff list on our template and we create the accounts. Office staff receive an email invitation; factory and warehouse staff get a personal activation code. Management sign in with two-factor authentication.</p></details>
+        <details><summary>Is our data safe?</summary><p>Every company's data is kept strictly separate, and each person only sees what their role allows. You choose how long records like visitor details are kept, and every change is recorded in the trail.</p></details>
+        <details><summary>Are you tracking our reps all the time?</summary><p>No. Rep tracking only records kilometres while someone is clocked in for work, and only when your company switches the add-on on.</p></details>
+        <details><summary>How much does it cost?</summary><p>Pricing depends on your team size and the modules you choose. Get in touch and we'll put together a quote for your company.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact" class="alt">
     <div class="wrap">
       <div class="contact">
         <div>
-          <h2>Let's talk about your operation</h2>
-          <p class="sub" style="margin-bottom:0">Every company's setup is different, so pricing is quoted for your team size and the modules you need. Call or WhatsApp us for a quote, or to be among the first companies on NAEON.</p>
+          <div class="kicker">Book a demo</div>
+          <h2>See NAEON working for a company like yours</h2>
+          <p class="sub" style="margin-bottom:0">We'll walk you through a live demo company and switch between roles, so you see exactly what your reps, managers, finance and factory staff would see.</p>
+          <ul class="demo-list">
+            <li>30 minutes, online or at your office</li>
+            <li>A quote based on your team and modules</li>
+            <li>Be first in line when NAEON launches</li>
+          </ul>
         </div>
         <div class="person">
           <div class="role">Sales</div>
           <div class="name">Lené van Wyk</div>
           <div class="num">082 811 9919</div>
+          <div style="height:18px"></div>
           <div class="acts">
-            <a class="btn btn-primary" href="tel:+27828119919">Call</a>
-            <a class="btn btn-secondary" href="https://wa.me/27828119919?text=Hi%20Len%C3%A9%2C%20I'd%20like%20to%20find%20out%20more%20about%20NAEON." target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-primary" href="https://wa.me/27828119919?text=Hi%20Len%C3%A9%2C%20I'd%20like%20to%20book%20a%20NAEON%20demo." target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-secondary" href="tel:+27828119919">Call</a>
           </div>
         </div>
       </div>
@@ -272,9 +508,19 @@
 </main>
 
 <footer>
-  <div class="wrap foot">
-    <a href="#" class="logo" style="font-size:17px" aria-label="NAEON home">NA<span class="e" aria-hidden="true"><i></i><i></i><i></i></span>ON</a>
-    <span>© <span id="y">2026</span> NAEON. All rights reserved.</span>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#" class="logo" style="font-size:18px;display:inline-flex" aria-label="NAEON home">NA<span class="e" aria-hidden="true"><i></i><i></i><i></i></span>ON</a>
+        <p style="margin-top:12px;max-width:34ch">One platform. Every operation. The operations CRM for companies that make, move and sell.</p>
+      </div>
+      <div><h4>Product</h4><a href="#platform">Platform</a><a href="#addons">Add-ons</a><a href="#industries">Industries</a><a href="#download">Download</a></div>
+      <div><h4>Company</h4><a href="#contact">Book a demo</a><a href="#faq">FAQ</a><a href="https://app.naeon.co.za">Sign in</a></div>
+    </div>
+    <div class="legal">
+      <span>© <span id="y">2026</span> NAEON. All rights reserved.</span>
+      <span>Made in South Africa</span>
+    </div>
   </div>
 </footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
