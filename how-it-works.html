@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How NAEON works</title>
+<meta name="description" content="How NAEON works: every feature and add-on explained.">
+<!-- Placeholder until the guide is written: keep it out of search results for now -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#07111F">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07111F;--bg2:#0B1728;--card:#111F32;--line:#263A50;--blue:#1677FF;--cyan:#00C8F8;--cobalt:#2455E6;--text:#F5F8FC;--text2:#9DADBF;--muted:#6F8195;--grad:linear-gradient(90deg,#2455E6,#1677FF 50%,#00C8F8);--max:1160px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--cyan);text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px;width:100%}
+header{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.links{display:flex;gap:26px;align-items:center}
+.links a.l{color:var(--text2);font-size:15px;font-weight:500}
+.links a.l:hover,.links a.l.on{color:var(--text)}
+.logo{display:flex;align-items:center;font-weight:800;font-size:22px;letter-spacing:.14em;color:var(--text)}
+.logo .e{display:inline-flex;flex-direction:column;justify-content:space-between;width:.62em;height:.72em;margin:0 .14em 0 .04em}
+.logo .e i{display:block;height:20%;border-radius:1px}
+.logo .e i:nth-child(1){background:var(--cyan)}.logo .e i:nth-child(2){background:var(--blue);width:82%}.logo .e i:nth-child(3){background:var(--cobalt)}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:46px;padding:0 22px;border-radius:10px;font-weight:600;font-size:15px;white-space:nowrap}
+.btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:#2a85ff}
+.btn-grad{background:var(--grad);color:#fff}
+.btn-secondary{border:1px solid var(--blue);color:var(--text)}
+.btn-ghost{color:var(--text2)}
+.btn-sm{height:38px;padding:0 16px;font-size:14px}
+main{flex:1;position:relative;overflow:hidden}
+main:before{content:"";position:absolute;right:-200px;top:-260px;width:900px;height:900px;background:radial-gradient(closest-side,rgba(22,119,255,.18),transparent 70%);pointer-events:none}
+.page{padding:96px 0 120px;position:relative}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:12px}
+h1{font-size:clamp(36px,5vw,56px);line-height:1.08;font-weight:800;letter-spacing:-.03em;margin-bottom:18px}
+.lead{font-size:18px;color:var(--text2);max-width:58ch}
+.soon{margin-top:40px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;max-width:640px}
+.soon b{display:block;font-size:17px;margin-bottom:6px}
+.soon p{color:var(--text2);font-size:15px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:640px){.links a.l,.links .btn-ghost{display:none}.page{padding:64px 0 80px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo" aria-label="NAEON home">NA<span class="e" aria-hidden="true"><i></i><i></i><i></i></span>ON</a>
+    <nav class="links">
+      <a class="l" href="index.html#platform">Platform</a>
+      <a class="l on" href="how-it-works.html">How it works</a>
+      <a class="l" href="index.html#industries">Industries</a>
+      <a class="l" href="index.html#faq">FAQ</a>
+      <a class="l" href="index.html#download">Download</a>
+      <a class="btn btn-ghost btn-sm" href="https://app.naeon.co.za">Sign in</a>
+      <a class="btn btn-primary btn-sm" href="index.html#contact">Book a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap page">
+    <div class="kicker">How NAEON works</div>
+    <h1>Every feature and add-on, explained</h1>
+
+    <!-- CONTENT GOES HERE once the app is complete:
+         how NAEON works, what it offers, each feature and each add-on. -->
+
+    <div class="soon">
+      <b>Coming soon</b>
+      <p>We're putting together a full guide to NAEON. In the meantime, we'd be happy to show you how it works.</p>
+      <div class="cta">
+        <a class="btn btn-grad" href="index.html#contact">Book a demo</a>
+        <a class="btn btn-secondary" href="index.html">Back to home</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="y">2026</span> NAEON. All rights reserved.</span>
+    <span>Made in South Africa</span>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
