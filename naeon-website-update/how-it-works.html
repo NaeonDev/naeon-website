@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How NAEON works</title>
+<meta name="description" content="How NAEON works: the core every company gets and all 129 add-ons explained, from sales and HR to production, logistics and the gate.">
+<link rel="canonical" href="https://naeon.co.za/how-it-works.html">
+<meta name="theme-color" content="#07111F">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07111F;--bg2:#0B1728;--card:#111F32;--line:#263A50;--blue:#1677FF;--cyan:#00C8F8;--cobalt:#2455E6;--text:#F5F8FC;--text2:#9DADBF;--muted:#6F8195;--green:#24C78E;--amber:#F5B942;--grad:linear-gradient(90deg,#2455E6,#1677FF 50%,#00C8F8);--max:1160px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--cyan);text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px;width:100%}
+header{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.links{display:flex;gap:26px;align-items:center}
+.links a.l{color:var(--text2);font-size:15px;font-weight:500}
+.links a.l:hover,.links a.l.on{color:var(--text)}
+.logo{display:flex;align-items:center;font-weight:800;font-size:22px;letter-spacing:.14em;color:var(--text)}
+.logo .e{display:inline-flex;flex-direction:column;justify-content:space-between;width:.62em;height:.72em;margin:0 .14em 0 .04em}
+.logo .e i{display:block;height:20%;border-radius:1px}
+.logo .e i:nth-child(1){background:var(--cyan)}.logo .e i:nth-child(2){background:var(--blue);width:82%}.logo .e i:nth-child(3){background:var(--cobalt)}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:46px;padding:0 22px;border-radius:10px;font-weight:600;font-size:15px;white-space:nowrap}
+.btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:#2a85ff}
+.btn-grad{background:var(--grad);color:#fff}
+.btn-secondary{border:1px solid var(--blue);color:var(--text)}
+.btn-ghost{color:var(--text2)}
+.btn-sm{height:38px;padding:0 16px;font-size:14px}
+main{flex:1}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero:before{content:"";position:absolute;right:-200px;top:-300px;width:900px;height:900px;background:radial-gradient(closest-side,rgba(22,119,255,.18),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;padding-top:84px;padding-bottom:48px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:12px}
+h1{font-size:clamp(36px,5vw,56px);line-height:1.08;font-weight:800;letter-spacing:-.03em;margin-bottom:18px;max-width:18ch}
+.lead{font-size:18px;color:var(--text2);max-width:62ch}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.jump a{font-size:14px;color:var(--text2);border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 14px}
+.jump a:hover{color:var(--text);border-color:var(--blue)}
+.grp{padding:64px 0 8px;scroll-margin-top:72px}
+.gh{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:12px}
+.gh h2{font-size:clamp(24px,3vw,32px);font-weight:800;letter-spacing:-.02em}
+.gh span{color:var(--muted);font-size:14px}
+.gb{color:var(--text2);margin-bottom:22px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;scroll-margin-top:90px}
+.card .ch{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px}
+.card b{font-size:16px}
+.card>b{display:block;margin-bottom:6px}
+.card p{color:var(--text2);font-size:14.5px}
+.card small{display:block;margin-top:10px;color:var(--muted);font-size:13px}
+.t{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px}
+.t.soon{background:rgba(245,185,66,.14);color:var(--amber)}
+.t.use{background:rgba(157,173,191,.12);color:var(--text2)}
+#core .card{border-color:rgba(22,119,255,.4)}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
+.flow div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.flow i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--grad);font-style:normal;font-weight:800;margin-bottom:12px}
+.flow b{display:block;font-size:16px;margin-bottom:4px}.flow p{color:var(--text2);font-size:14.5px}
+.note{color:var(--muted);font-size:14px;margin-top:16px;max-width:80ch}
+.end{padding-bottom:96px}
+.cta-box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:40px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;position:relative;overflow:hidden}
+.cta-box:before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:var(--grad)}
+.cta-box h2{font-size:26px;font-weight:800;margin-bottom:6px}.cta-box p{color:var(--text2);max-width:52ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.legal-links{display:flex;flex-wrap:wrap;gap:6px 20px}.legal-links a{color:var(--text2)}
+.jump b{color:var(--text)}
+.jump.small{margin:0 0 8px}.jump.small a{font-size:13px;padding:5px 12px}
+.role{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;padding:48px 0;border-top:1px solid rgba(38,58,80,.6);scroll-margin-top:72px}
+.role.nopic{grid-template-columns:1fr}.role.nopic .rt{max-width:760px}
+.role.rev .rt{order:2}
+.where{display:inline-flex;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#7fb4ff;background:rgba(22,119,255,.14);border-radius:999px;padding:4px 10px}
+.role h3{font-size:26px;font-weight:800;letter-spacing:-.01em;margin:10px 0 8px}
+.role .rt>p{color:var(--text2)}
+.role ol{list-style:none;counter-reset:r;margin:18px 0;display:grid;gap:10px}
+.role ol li{counter-increment:r;display:grid;grid-template-columns:28px 1fr;gap:12px;font-size:15px}
+.role ol li:before{content:counter(r);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(22,119,255,.16);color:#7fb4ff;font-weight:700;font-size:13px}
+.never{font-size:14px;color:var(--text2);border-left:3px solid var(--green);padding:6px 0 6px 12px}
+.never b{color:var(--green)}
+.shots{display:grid;gap:16px;align-items:end;justify-items:center}
+.shots img{display:block;width:100%;height:auto}
+.shots .phone{border:8px solid #1a2a40;border-radius:30px;overflow:hidden;background:#000;box-shadow:0 30px 60px rgba(0,0,0,.5);width:100%;max-width:280px}
+.shots .tablet{border:10px solid #1a2a40;border-radius:22px;overflow:hidden;background:#000;box-shadow:0 30px 60px rgba(0,0,0,.5);width:100%}
+.shots .browser{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--bg2);box-shadow:0 24px 60px rgba(0,0,0,.45);width:100%}
+.shots .browser .bar{height:28px;display:flex;align-items:center;gap:6px;padding:0 12px;border-bottom:1px solid var(--line);background:#0d1a2c}
+.shots .browser .bar i{width:9px;height:9px;border-radius:50%;background:#263A50}
+.shots .browser .bar span{margin-left:12px;font-size:11px;color:var(--muted);background:#07111F;border-radius:6px;padding:1px 10px}
+.shots.k-phone .phone{max-width:300px}
+.shots.k-phone-phone{grid-template-columns:1fr 1fr}
+.shots.k-phone-desktop,.shots.k-desktop-phone{grid-template-columns:1.6fr 1fr;align-items:center}
+.shots.k-desktop-desktop{grid-template-columns:1fr}
+@media (max-width:980px){.cards{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.role{grid-template-columns:1fr;gap:28px}.role.rev .rt{order:0}}
+@media (max-width:640px){.shots.k-phone-desktop,.shots.k-desktop-phone{grid-template-columns:1fr}.shots.k-phone-phone .phone{border-width:5px;border-radius:20px}}
+@media (max-width:640px){.links a.l,.links .btn-ghost{display:none}.cards,.flow{grid-template-columns:1fr}.hero .wrap{padding-top:56px}.cta-box{padding:28px 22px}.cta .btn{flex:1}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo" aria-label="NAEON home">NA<span class="e" aria-hidden="true"><i></i><i></i><i></i></span>ON</a>
+    <nav class="links">
+      <a class="l" href="index.html#platform">Platform</a>
+      <a class="l on" href="how-it-works.html">How it works</a>
+      <a class="l" href="index.html#industries">Industries</a>
+      <a class="l" href="index.html#faq">FAQ</a>
+      <a class="l" href="index.html#download">Download</a>
+      <a class="btn btn-ghost btn-sm" href="https://app.naeon.co.za">Sign in</a>
+      <a class="btn btn-primary btn-sm" href="index.html#contact">Book a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero"><div class="wrap">
+    <div class="kicker">How NAEON works</div>
+    <h1>Every feature and add-on, explained</h1>
+    <p class="lead">See what a normal day looks like for each person, then every add-on in plain words. Every company gets the core. Everything else is one of 129 add-ons you switch on when you need it, and off when you don't. An add-on that needs another one says so.</p>
+    <div class="jump"><a href="#roles"><b>A day in NAEON</b></a><a href="#sales">Sales and customers</a><a href="#finance">Finance and expenses</a><a href="#people">People and HR</a><a href="#stock">Procurement and stock</a><a href="#production">Production and quality</a><a href="#dispatch">Dispatch and delivery</a><a href="#logistics">Logistics and transport</a><a href="#fleet">Maintenance and fleet</a><a href="#site">Site, security and safety</a><a href="#documents">Documents</a><a href="#together">Working together and reporting</a><a href="#ai">AI and messaging</a></div>
+  </div></div>
+
+  <div class="wrap">
+    <section class="grp" id="core">
+      <div class="gh"><h2>The core</h2><span>Every company</span></div>
+      <p class="gb">What every NAEON company has from the first day.</p>
+      <div class="cards"><div class="card"><b>Sign-in for everyone</b><p>Office staff get an email invitation; factory and warehouse staff get a personal activation code. Management sign in with two-factor authentication, and a phone can be unlocked with a quick PIN.</p></div><div class="card"><b>Roles and permissions</b><p>Each person sees only what their role allows. Start from NAEON's ready-made roles for your type of company and adjust them.</p></div><div class="card"><b>Departments and sites</b><p>Your departments and branches, so requests reach the right manager and figures add up per site.</p></div><div class="card"><b>The approvals inbox</b><p>Every request waiting for someone lands in one inbox, on any device. Nobody can approve their own request; routine items can be approved in bulk; a request can be withdrawn, fixed and resubmitted, showing what changed.</p></div><div class="card"><b>A trail behind every entry</b><p>Created, approved or rejected, carried out and completed: who did it and when. The audit log keeps sensitive views and changes too.</p></div><div class="card"><b>Notifications</b><p>The bell in the app and push notifications, chosen per person and per type, with quiet hours at night. Approvals and security alerts always come through.</p></div><div class="card"><b>Your company, your look</b><p>Your logo and colour, light or dark mode, and a data-light mode for people on small data bundles.</p></div><div class="card"><b>Profile and devices</b><p>Each person's own details, their signed-in devices, a download of their own data and a request to remove their account.</p></div></div>
+    </section>
+
+    <section class="grp" id="flow">
+      <div class="gh"><h2>How work moves through NAEON</h2></div>
+      <div class="flow">
+        <div><i>1</i><b>Captured</b><p>Someone records it where the work happens: a quote request at the customer, a fuel slip at the pump, a load update at the border.</p></div>
+        <div><i>2</i><b>Approved</b><p>It goes to the right person's approvals inbox. They approve or reject it, with a reason.</p></div>
+        <div><i>3</i><b>Carried out</b><p>The person who acts on it records that it was done, for example finance sending the quote.</p></div>
+        <div><i>4</i><b>Completed</b><p>The record closes, and its trail shows who did each step and when.</p></div>
+      </div>
+      <p class="note">NAEON doesn't replace your accounting system. Tax invoices, credit notes and statements stay there; finance takes the approved figures across with import-ready files.</p>
+    </section>
+
+    <section class="grp" id="roles">
+      <div class="gh"><h2>A day in NAEON, role by role</h2><span>9 roles</span></div>
+      <p class="gb">What each person does in NAEON on a normal day. Everyone sees only what their role allows and what the company has switched on. The screens are from NAEON's demo companies, with sample data.</p>
+      <div class="jump small"><a href="#role-rep">Sales rep</a><a href="#role-finance">Finance</a><a href="#role-hr">HR</a><a href="#role-factory">Factory floor</a><a href="#role-gate">Security at the gate</a><a href="#role-controller">Controller / dispatcher</a><a href="#role-driver">Driver</a><a href="#role-fleet">Fleet controller</a><a href="#role-management">Management</a></div>
+      
+      <div class="role" id="role-rep">
+        <div class="rt">
+          <span class="where">On the road</span>
+          <h3>Sales rep</h3>
+          <p>A rep's day runs on their phone, from the first customer to the last follow-up.</p>
+          <ol><li>Clocks in on the phone. With Rep tracking on, they read the tracking notice once and kilometres are recorded only while they're clocked in.</li><li>Opens today's visit plan and checks in at the customer. Away from the site, the check-in asks for a reason.</li><li>Captures a quote request with lines from the price list, and sees what's in stock and what's on order.</li><li>The request goes to the sales manager, and to management where your route says so. When finance sends the quote, the rep is told to follow up.</li><li>Logs the call or visit on the customer's timeline, and watches the monthly target on their home.</li></ol>
+          <p class="never"><b>Built in:</b> A rep sees their own figures only, never cost prices or the gross margin.</p>
+        </div>
+        <div class="shots k-phone"><div class="phone"><img src="img/hero-phone.jpg" width="780" height="1560" loading="lazy" alt="A sales rep&#x27;s home on the phone: leads, open quotes, monthly target and quick actions"></div></div>
+      </div>
+      <div class="role rev nopic" id="role-finance">
+        <div class="rt">
+          <span class="where">In the office</span>
+          <h3>Finance</h3>
+          <p>Finance gets work that's already approved, with the trail behind it.</p>
+          <ol><li>Receives signed-off quote requests, sends the quote and records it, so the rep is told.</li><li>Records customer payments and part payments, and follows up outstanding totals and accounts on hold.</li><li>Approves expense claims and fuel slips after the line manager, and reimburses them in bulk.</li><li>Takes approved claims and fuel into Sage, Xero or another system with import-ready files, never twice.</li><li>Downloads the payroll export file for the pay period, in the company's own layout.</li></ol>
+          <p class="never"><b>Built in:</b> Nobody approves their own claim, finance included.</p>
+        </div>
+        
+      </div>
+      <div class="role nopic" id="role-hr">
+        <div class="rt">
+          <span class="where">In the office</span>
+          <h3>HR</h3>
+          <p>HR keeps the people side in one place instead of a filing cabinet and a spreadsheet.</p>
+          <ol><li>Adds people, or imports the staff list, and gives factory staff a personal activation code.</li><li>Decides leave against balances and the leave calendar, with public holidays, half days and clash warnings.</li><li>Files contracts, IDs and certificates, with alerts before they expire.</li><li>Publishes policies and sees who has read and acknowledged them.</li><li>Runs shifts, swaps and overtime pre-approval, training and onboarding checklists, where those add-ons are on.</li></ol>
+          <p class="never"><b>Built in:</b> Sensitive views, like disciplinary records, are recorded every time someone opens them.</p>
+        </div>
+        
+      </div>
+      <div class="role rev nopic" id="role-factory">
+        <div class="rt">
+          <span class="where">On a shared tablet</span>
+          <h3>Factory floor</h3>
+          <p>Operators don't need their own device or email address. They share a tablet at the line.</p>
+          <ol><li>Taps in on the shared tablet with their employee number and PIN, and clocks in at the tablet's site.</li><li>Opens My jobs, starts a job and works through its steps, with the work instruction and current drawing on screen.</li><li>Records output and scrap as they go. Scrap above the limit goes to the supervisor to approve.</li><li>Reports a breakdown: the machine shows as down, a work order is raised, and maintenance and the supervisor are told.</li><li>Is signed out after each turn, so the next person taps in.</li></ol>
+          <p class="never"><b>Built in:</b> Quality control never inspects output they produced themselves.</p>
+        </div>
+        
+      </div>
+      <div class="role" id="role-gate">
+        <div class="rt">
+          <span class="where">At the gate</span>
+          <h3>Security at the gate</h3>
+          <p>The gate knows who is on site, who is expected and what may leave.</p>
+          <ol><li>Logs a walk-up visitor; the person they're visiting approves from their own home screen.</li><li>Checks contractors against the approved list and their induction before letting them in.</li><li>Logs trucks in and out, and confirms that a loaded dispatch truck may leave, or stops it with a reason.</li><li>Clocks employees in and out at the gate as their attendance.</li><li>Starts an emergency roll call and ticks people off at the assembly point.</li></ol>
+          <p class="never"><b>Built in:</b> Visitor names stay out of the audit trail, and visitor records are deleted after your chosen period.</p>
+        </div>
+        <div class="shots k-desktop"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>app.naeon.co.za</span></div><img src="img/gate-desk.jpg" width="1600" height="1000" loading="lazy" alt="The security gate in NAEON: visitors, contractors and trucks on site"></div></div>
+      </div>
+      <div class="role rev nopic" id="role-controller">
+        <div class="rt">
+          <span class="where">Logistics</span>
+          <h3>Controller / dispatcher</h3>
+          <p>The controller books, plans and follows every load, and keeps the customer informed.</p>
+          <ol><li>Books a load for a customer with its pickups and drop-offs, from saved places. The rate comes from the customer's rate card for that lane.</li><li>Plans the day on the planning board: loads onto trucks, trailers and drivers, part loads, driver changeovers and backhaul suggestions. A truck that's off the road or a driver with expired documents is flagged before it goes.</li><li>Follows the live board, with each load's last position, estimated arrival and late alerts.</li><li>Shares a track-and-trace link with the customer, who sees the load's progress and POD but never the driver's details.</li><li>Closes the load at POD received, and the Unbilled loads list shows finance what to invoice.</li></ol>
+          <p class="never"><b>Built in:</b> A rate changed beyond the allowed margin waits for sign-off, and nobody signs off their own.</p>
+        </div>
+        
+      </div>
+      <div class="role" id="role-driver">
+        <div class="rt">
+          <span class="where">Logistics</span>
+          <h3>Driver</h3>
+          <p>Everything the driver needs is on one phone screen, next stop first.</p>
+          <ol><li>Does the vehicle check before use. A major defect with a photo takes the truck off the road.</li><li>Starts the trip. With Truck tracking on, positions are recorded only while the trip runs, after the driver has acknowledged the tracking notice.</li><li>Presses Navigate to open the stop in Google Maps or Waze. Near the stop, the screen asks whether to mark Arrived.</li><li>Records proof of collection (pallets, seal numbers, weighbridge ticket, photo) and, at the drop-off, the POD with the receiver's name and signature. Without signal, it's kept on the phone and sent later.</li><li>On a cross-border load, records each crossing step in order. In trouble, a press-and-hold panic button alerts the company's nominated people with the truck's position. It doesn't call the police or armed response.</li></ol>
+          <p class="never"><b>Built in:</b> A driver never sees rates, prices or other drivers' loads.</p>
+        </div>
+        <div class="shots k-phone"><div class="phone"><img src="img/pod.jpg" width="780" height="1560" loading="lazy" alt="A driver&#x27;s home in NAEON: deliveries today, delivered and failed"></div></div>
+      </div>
+      <div class="role rev nopic" id="role-fleet">
+        <div class="rt">
+          <span class="where">Logistics</span>
+          <h3>Fleet controller</h3>
+          <p>The fleet controller keeps trucks, trailers and drivers legal and on the road.</p>
+          <ol><li>Keeps vehicles and trailers with their licence, COF and service reminders, and drivers' licences and PrDPs.</li><li>Reviews each trip's track and the kilometres against the odometer. Only the fleet controller and management see tracks, and every view is recorded.</li><li>Follows driver hours and behaviour scores, and decides what to do about a flag. NAEON never decides about a person by itself.</li><li>Nominates traffic fines to the driver on the trip at the time, and follows accident and cargo claims, tyres and diesel.</li><li>Builds the RTMS audit pack for a period and site.</li></ol>
+          <p class="never"><b>Built in:</b> Passport, visa and work-permit numbers are shown only on request, and every view is recorded.</p>
+        </div>
+        
+      </div>
+      <div class="role" id="role-management">
+        <div class="rt">
+          <span class="where">Everywhere</span>
+          <h3>Management</h3>
+          <p>Management sees the whole company without chasing anyone for an update.</p>
+          <ol><li>Opens the management home: approvals waiting, sales, cash collected, staff on site and each department's figures.</li><li>Approves from the phone, one at a time or routine items in bulk, with flagged ones held back.</li><li>Opens reports for any area, compares periods and exports them, including profit per load, truck and customer for transporters.</li><li>Is told when something needs them, through the company's cross-department alerts.</li><li>Reads the Monday summary of last week, if the optional AI weekly summary is on.</li></ol>
+          <p class="never"><b>Built in:</b> Even management can't approve their own request.</p>
+        </div>
+        <div class="shots k-desktop-desktop"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>app.naeon.co.za</span></div><img src="img/hero-desktop.jpg" width="2400" height="1500" loading="lazy" alt="NAEON management home: approvals waiting, sales, cash collected, staff on site and the weekly summary"></div><div class="browser"><div class="bar"><i></i><i></i><i></i><span>app.naeon.co.za</span></div><img src="img/approvals.jpg" width="1600" height="1000" loading="lazy" alt="NAEON approvals inbox with expense claims, fuel slips and policies waiting"></div></div>
+      </div>
+    </section>
+
+    <section class="grp" id="sales">
+      <div class="gh"><h2>Sales and customers</h2><span>14 add-ons</span></div>
+      <p class="gb">Leads, quotes, orders and customers, with your reps on the road.</p>
+      <div class="cards"><div class="card" id="sales"><div class="ch"><b>Sales</b></div><p>Customers, price list, leads and quote requests.</p></div><div class="card" id="rep-tracking"><div class="ch"><b>Rep tracking</b></div><p>Clock-in with location, customer visits and the team view.</p><small>Needs Sales and Attendance and clock-in</small></div><div class="card" id="credit-control"><div class="ch"><b>Credit control</b></div><p>Credit limits, accounts on hold and the collections log.</p><small>Needs Sales and Finance</small></div><div class="card" id="returns"><div class="ch"><b>Returns and credit notes</b></div><p>Record returns and the credit note numbers finance enters.</p><small>Needs Sales and Finance</small></div><div class="card" id="margin-warning"><div class="ch"><b>Margin warning</b></div><p>Approvers see when a discount puts the margin below the minimum.</p><small>Needs Sales</small></div><div class="card" id="lead-sources"><div class="ch"><b>Lead sources and lost reasons</b></div><p>Where leads come from and why deals are lost, with win/loss figures.</p><small>Needs Sales</small></div><div class="card" id="visit-planning"><div class="ch"><b>Visit planning</b></div><p>Weekly visit plans per rep, planned against actual.</p><small>Needs Rep tracking</small></div><div class="card" id="check-in-radius"><div class="ch"><b>Check-in near customer</b></div><p>Customer check-ins only near the site, or flagged with a reason.</p><small>Needs Rep tracking</small></div><div class="card" id="price-agreements"><div class="ch"><b>Price agreements</b></div><p>Agreed prices and standing discounts per customer, approved like a quote request.</p><small>Needs Sales</small></div><div class="card" id="contact-log"><div class="ch"><b>Customer contact log &amp; complaints</b></div><p>Every call, email and visit with a customer, and complaints from open to closed.</p><small>Needs Sales</small></div><div class="card" id="rep-commission"><div class="ch"><b>Rep commission</b></div><p>Commission rules per rep, role or product group. calculated per month with the lines it came from. approved by the sales manager and marked paid by finance.</p><small>Needs Sales</small></div><div class="card" id="territories"><div class="ch"><b>Territories</b></div><p>Regions with an owner rep and a backup. customers and leads by territory. a territory moves to another rep in one step. performance per territory.</p><small>Needs Sales</small></div><div class="card" id="customer-health"><div class="ch"><b>Customer health and gone-quiet alerts</b></div><p>Each customer's usual ordering cycle, last order, trend, complaints, overdue payments and last visit as a health status. reps are told when a regular customer goes quiet.</p><small>Needs Sales</small></div><div class="card" id="stock-for-reps"><div class="ch"><b>Stock availability for reps</b></div><p>On the rep's phone per product: available now after reservations, on order with the expected date and when it can be made. quantities and dates only.</p><small>Needs Sales and Warehouse &amp; stock</small></div></div>
+    </section>
+    <section class="grp" id="finance">
+      <div class="gh"><h2>Finance and expenses</h2><span>8 add-ons</span></div>
+      <p class="gb">Payments, claims, fuel and budgets, ready for your accounting system.</p>
+      <div class="cards"><div class="card" id="finance"><div class="ch"><b>Finance</b></div><p>Quote and invoice steps, payments and outstanding totals.</p></div><div class="card" id="expenses"><div class="ch"><b>Expenses</b></div><p>Expense claims with receipts, approvals and reimbursement.</p></div><div class="card" id="fuel"><div class="ch"><b>Fuel &amp; vehicles</b></div><p>Fuel slips with odometer readings and the vehicle register.</p><small>Needs Expenses</small></div><div class="card" id="mileage-claims"><div class="ch"><b>Mileage claims</b></div><p>Per-km claims, with tracked km shown next to claimed km.</p><small>Needs Expenses</small></div><div class="card" id="fuel-flags"><div class="ch"><b>Fuel efficiency and duplicate flags</b></div><p>L/100 km per vehicle, unusual fill-ups and possible duplicates flagged.</p><small>Needs Fuel &amp; vehicles</small></div><div class="card" id="expense-limits"><div class="ch"><b>Expense limits</b></div><p>A limit per expense type, shown to approvers as Over limit.</p><small>Needs Expenses</small></div><div class="card" id="department-budgets"><div class="ch"><b>Department budgets</b></div><p>Monthly or yearly budgets per department and cost type. purchase requests and expenses show what is used and left. over-budget requests need extra approval.</p><small>Needs Procurement &amp; purchase orders or Expenses</small></div><div class="card" id="accounting-exports"><div class="ch"><b>Accounting exports</b></div><p>Approved claims and fuel in import-ready files for Sage, Xero and others.</p><small>Needs Expenses</small></div></div>
+    </section>
+    <section class="grp" id="people">
+      <div class="gh"><h2>People and HR</h2><span>12 add-ons</span></div>
+      <p class="gb">Attendance, leave, HR files, shifts and the payroll export.</p>
+      <div class="cards"><div class="card" id="attendance"><div class="ch"><b>Attendance and clock-in</b></div><p>Clock in to use NAEON, attendance times and automatic clock-out.</p></div><div class="card" id="leave"><div class="ch"><b>Leave</b></div><p>Leave requests, balances and the leave calendar.</p></div><div class="card" id="leave-rules"><div class="ch"><b>Leave rules</b></div><p>Carry-over, forfeits, sick notes and clash warnings.</p><small>Needs Leave</small></div><div class="card" id="hr"><div class="ch"><b>HR team</b></div><p>The HR team's tools: deciding leave, approving HR files, publishing policies.</p></div><div class="card" id="hr-documents"><div class="ch"><b>HR files</b></div><p>Employee documents (contracts, IDs, certificates) with expiry alerts.</p></div><div class="card" id="policies"><div class="ch"><b>Policies</b></div><p>Company policies staff read and acknowledge.</p></div><div class="card" id="onboarding"><div class="ch"><b>Onboarding and offboarding</b></div><p>Checklists for HR, the line manager and admin when people start or leave.</p></div><div class="card" id="disciplinary"><div class="ch"><b>Disciplinary and warnings register</b></div><p>Verbal, written and final written warnings with acknowledgement or a witness, valid for a set time. hearings with outcome and appeal. every view recorded.</p><small>Needs HR team</small></div><div class="card" id="payroll-export"><div class="ch"><b>Payroll export file</b></div><p>Per pay period: hours, overtime, weekend and public holiday hours, leave, absences, reimbursements and commission per employee as an Excel or CSV file in the company's layout. locked after export.</p><small>Needs Attendance and clock-in or Leave</small></div><div class="card" id="probation-checkins"><div class="ch"><b>Probation and performance check-ins</b></div><p>Probation end dates with reminders and a review. periodic check-ins with the company's questions and rating scale, acknowledged by the employee.</p><small>Needs HR team</small></div><div class="card" id="shifts"><div class="ch"><b>Shifts</b></div><p>Shift patterns, shift teams and supervisors, swaps, overtime pre-approval and absences.</p></div><div class="card" id="training-matrix"><div class="ch"><b>Training matrix</b></div><p>Skills and training per employee, required skills and expiry reminders.</p></div></div>
+    </section>
+    <section class="grp" id="stock">
+      <div class="gh"><h2>Procurement and stock</h2><span>14 add-ons</span></div>
+      <p class="gb">From the purchase request to the shelf, traced batch by batch.</p>
+      <div class="cards"><div class="card" id="suppliers"><div class="ch"><b>Suppliers</b></div><p>The supplier list with contacts, terms and supplier performance.</p></div><div class="card" id="supplier-approval"><div class="ch"><b>Supplier approval</b></div><p>Supplier documents with expiry dates and reminders. suppliers approved, conditional or blocked. purchase requests to a blocked supplier refused, to a conditional one warned.</p><small>Needs Suppliers</small></div><div class="card" id="procurement"><div class="ch"><b>Procurement &amp; purchase orders</b></div><p>Purchase requests, approvals, purchase orders, receiving and price history.</p><small>Needs Suppliers</small></div><div class="card" id="blanket-orders"><div class="ch"><b>Blanket purchase orders</b></div><p>Supplier agreements with a quantity or value, prices and validity. call-offs as purchase requests pre-approved within the agreement, with the balance and warnings near the end.</p><small>Needs Procurement &amp; purchase orders</small></div><div class="card" id="supplier-quotes"><div class="ch"><b>Supplier quotes</b></div><p>Suppliers' prices side by side on a purchase request, and the choice recorded.</p><small>Needs Procurement &amp; purchase orders</small></div><div class="card" id="warehouse"><div class="ch"><b>Warehouse &amp; stock</b></div><p>Stock items, stock per site, movements, transfers and adjustments.</p></div><div class="card" id="stock-counts"><div class="ch"><b>Stock counts</b></div><p>Count a site or a category on screen, see the differences and approve them.</p><small>Needs Warehouse &amp; stock</small></div><div class="card" id="lot-traceability"><div class="ch"><b>Batch and lot traceability</b></div><p>Batch numbers, expiry dates and bins from receiving through production to dispatch. trace forwards and backwards and a recall list.</p><small>Needs Warehouse &amp; stock</small></div><div class="card" id="returns-handling"><div class="ch"><b>Returns handling</b></div><p>Returned goods logged at the gate or by dispatch, inspected and decided (to stock, scrap, rework or back to the supplier) with approval.</p><small>Needs Returns and credit notes and Warehouse &amp; stock</small></div><div class="card" id="invoice-matching"><div class="ch"><b>Supplier invoice matching</b></div><p>Supplier invoices matched to the purchase order and the goods received. differences approved before finance pays.</p><small>Needs Procurement &amp; purchase orders</small></div><div class="card" id="material-planning"><div class="ch"><b>Material planning</b></div><p>Materials needed by open orders and planned jobs against stock, reserved and on order. shortages, reorder suggestions and purchase requests in one click.</p><small>Needs Production and Warehouse &amp; stock</small></div><div class="card" id="demand-forecast"><div class="ch"><b>Demand forecast</b></div><p>Quantities per product per month entered or imported by the sales manager, against what was ordered. material planning and capacity can include it.</p><small>Needs Sales</small></div><div class="card" id="serial-numbers"><div class="ch"><b>Serial numbers</b></div><p>A serial number per unit made (and received where wanted), traced forwards and backwards like lots and printed on delivery notes and certificates.</p><small>Needs Batch and lot traceability</small></div><div class="card" id="returnable-packaging"><div class="ch"><b>Returnable packaging</b></div><p>Pallets, crates and cylinders out per customer on dispatch and back on returns or collection. balances per customer and overdue returns flagged.</p><small>Needs Dispatch</small></div></div>
+    </section>
+    <section class="grp" id="production">
+      <div class="gh"><h2>Production and quality</h2><span>14 add-ons</span></div>
+      <p class="gb">Jobs, steps and output on the factory floor, with quality built in.</p>
+      <div class="cards"><div class="card" id="usage-variance"><div class="ch"><b>Material usage variance</b></div><p>Materials issued against the materials list per job, product, line and period. variances over the limit flagged.</p><small>Needs Production</small></div><div class="card" id="routings"><div class="ch"><b>Routings</b></div><p>Operations per product (step, line or machine, set-up and run time, QC point) shown on the job and the factory screen step by step, with output and time per step.</p><small>Needs Production</small></div><div class="card" id="capacity-planning"><div class="ch"><b>Capacity planning</b></div><p>Capacity per line and shift from the routings or the ideal rates against the planned jobs: load as a percentage, overload warnings and the next shift with room.</p><small>Needs Production</small></div><div class="card" id="job-costing"><div class="ch"><b>Job costing</b></div><p>An estimated cost per production job before and after: materials at cost, labour hours times the line's rate and overhead. per unit and per product over time, for finance and management only.</p><small>Needs Production</small></div><div class="card" id="work-instructions"><div class="ch"><b>Work instructions</b></div><p>Versioned instructions per line, machine or product, read and acknowledged like policies and shown on the factory screen for the job.</p><small>Needs Production and Policies</small></div><div class="card" id="outsourced-processing"><div class="ch"><b>Outsourced processing</b></div><p>Material sent to another company for a step (galvanising, painting, heat treatment), expected back, received back with QC and linked to the job. supplier performance.</p><small>Needs Production and Suppliers</small></div><div class="card" id="calibration"><div class="ch"><b>Calibration</b></div><p>Measuring equipment with calibration due dates, certificates and reminders. equipment out of calibration is blocked or flagged on quality inspections.</p><small>Needs Maintenance</small></div><div class="card" id="shared-tablets"><div class="ch"><b>Shared tablets</b></div><p>Factory floor tablets: tap in with an employee number and PIN.</p></div><div class="card" id="production"><div class="ch"><b>Production</b></div><p>Production lines and jobs, output, scrap and downtime per shift.</p></div><div class="card" id="quality"><div class="ch"><b>Quality control</b></div><p>QC checklists, inspections, quality holds and non-conformances.</p></div><div class="card" id="capa"><div class="ch"><b>Corrective and preventive actions</b></div><p>From a non-conformance, complaint, audit finding, incident or failed checklist: root cause, actions with owners and due dates and an effectiveness check. supplier corrective action requests.</p><small>Needs Quality control</small></div><div class="card" id="product-documents"><div class="ch"><b>Product documents and engineering changes</b></div><p>Specifications and drawings per product with revisions, only the current one on the factory screen. engineering changes approved with an effective date and tracked until everything is updated.</p><small>Needs Production</small></div><div class="card" id="tooling"><div class="ch"><b>Tooling</b></div><p>Moulds, dies and jigs with the products they make, usage counted from production output, a life limit and maintenance due by count. the tool shown on the job.</p><small>Needs Production and Maintenance</small></div><div class="card" id="custom-checklists"><div class="ch"><b>Custom checklists</b></div><p>The company's own checklists (opening and closing, housekeeping, 5S, forklift pre-use, cleaning, site inspections) on a schedule, with done and missed tracking.</p></div></div>
+    </section>
+    <section class="grp" id="dispatch">
+      <div class="gh"><h2>Dispatch and delivery</h2><span>3 add-ons</span></div>
+      <p class="gb">Picking, loading and the customer's signature.</p>
+      <div class="cards"><div class="card" id="gate-collections"><div class="ch"><b>Customer collections at the gate</b></div><p>Customers collecting a ready dispatch order: booked, checked in at the gate, loaded check and signature.</p><small>Needs Dispatch and Security gate &amp; visitors</small></div><div class="card" id="deliveries"><div class="ch"><b>Dispatch</b></div><p>Dispatch orders from sales orders: picking, loading, the gate and delivery.</p><small>Needs Sales</small></div><div class="card" id="proof-of-delivery"><div class="ch"><b>Proof of delivery</b></div><p>Drivers' deliveries with signature, photo and location at hand-over.</p><small>Needs Dispatch</small></div></div>
+    </section>
+    <section class="grp" id="logistics">
+      <div class="gh"><h2>Logistics and transport</h2><span>24 add-ons</span></div>
+      <p class="gb">Loads, trucks and drivers, from booking to POD and across borders.</p>
+      <div class="cards"><div class="card" id="loads"><div class="ch"><b>Loads</b></div><p>Customer bookings with pickups and drop-offs, load numbers, statuses from Booked to POD received, recurring loads, Unbilled loads and messages with the driver.</p><small>Needs Sales</small></div><div class="card" id="rate-cards"><div class="ch"><b>Rate cards and load quotes</b></div><p>Rates per customer and lane, load quotes through the quote sign-off route, and standing time (detention) charged after the free hours.</p><small>Needs Loads</small></div><div class="card" id="fuel-surcharge"><div class="ch"><b>Fuel surcharge</b></div><p>A diesel price per month and an agreed rule per customer, shown as its own line on the load.</p><small>Needs Rate cards and load quotes</small></div><div class="card" id="trailers"><div class="ch"><b>Trailers</b></div><p>Trailers in the vehicle register with their documents, checks and defects, linked to a horse per trip and per load.</p><small>Needs Fleet &amp; vehicle checks</small></div><div class="card" id="load-planning"><div class="ch"><b>Load planning</b></div><p>A day and week planning board: loads onto trucks, trailers and drivers, part loads, driver changeovers and backhaul suggestions.</p><small>Needs Loads and Trips</small></div><div class="card" id="live-load-status"><div class="ch"><b>Live load status</b></div><p>The driver's loads with status updates, proof of collection, standing time, the controller's live board, arrival estimates and late alerts.</p><small>Needs Loads</small></div><div class="card" id="track-trace-link"><div class="ch"><b>Customer track-and-trace link</b></div><p>A read-only link per load that the controller shares with the customer: status, last position, estimated arrival and the POD, never the driver's details.</p><small>Needs Loads and Live load status</small></div><div class="card" id="load-costing"><div class="ch"><b>Load costing and profit</b></div><p>The rate charged against fuel, tolls, allowances and a maintenance share per load, with profit per load, truck, driver, customer and lane.</p><small>Needs Loads</small></div><div class="card" id="truck-tracking"><div class="ch"><b>Truck tracking</b></div><p>The driver's phone records the trip's positions while it runs (with the driver's consent): route and km per trip and truck, compared with the odometer.</p><small>Needs Trips</small></div><div class="card" id="driver-behaviour"><div class="ch"><b>Driver behaviour</b></div><p>Speeding, long stops and idling from the trip's positions, harsh braking and cornering from the phone app, and a score per driver per week and month.</p><small>Needs Truck tracking</small></div><div class="card" id="driver-hours"><div class="ch"><b>Driver hours and fatigue</b></div><p>Driving and rest time per driver per shift, day and week, flags for long driving, long duty and short rest, and hours left on the planning board.</p><small>Needs Trips</small></div><div class="card" id="traffic-fines"><div class="ch"><b>Traffic fines</b></div><p>AARTO and municipal fines against a vehicle, the driver on its trip at the time, nominations, payment, due dates and reminders.</p><small>Needs Fleet &amp; vehicle checks</small></div><div class="card" id="accident-claims"><div class="ch"><b>Accident and insurance claims</b></div><p>A damage report taken on as an insurance claim: insurer, claim number, assessor, quotes, approved amount, excess, repairer and downtime.</p><small>Needs Fleet &amp; vehicle checks</small></div><div class="card" id="cargo-claims"><div class="ch"><b>Cargo claims</b></div><p>Damaged, short or stolen cargo per load and stop, with the goods-in-transit claim and the customer's claim against the company.</p><small>Needs Loads</small></div><div class="card" id="fleet-utilisation"><div class="ch"><b>Fleet utilisation</b></div><p>Loaded and empty km, idle days, loads and revenue per truck and per km, and days off the road, per truck and month.</p><small>Needs Loads</small></div><div class="card" id="tyres"><div class="ch"><b>Tyres</b></div><p>A tyre register by serial or brand number, fitted to a position on a vehicle or trailer, tread checks, rotations, retreads, scrapping and the cost per km.</p><small>Needs Fleet &amp; vehicle checks</small></div><div class="card" id="bulk-diesel"><div class="ch"><b>Bulk diesel</b></div><p>On-site diesel tanks: deliveries in, dispensing per truck, dips and the stock variance, and fuel per km per truck from the tank and fuel slips together.</p><small>Needs Fleet &amp; vehicle checks</small></div><div class="card" id="fuel-card-limits"><div class="ch"><b>Fuel card limits</b></div><p>A monthly or per-fill limit per vehicle and its fuel card. fuel slips over the limit are flagged to the Fleet controller and finance.</p><small>Needs Fuel &amp; vehicles</small></div><div class="card" id="trip-advances"><div class="ch"><b>Trip advances and allowances</b></div><p>Cash advances and allowances per trip through the approvals inbox, reconciled against the trip's slips, and driver incentive pay for the payroll export file.</p><small>Needs Trips</small></div><div class="card" id="subcontractors"><div class="ch"><b>Subcontractors</b></div><p>Transporters the company gives loads to, with their vehicles, drivers and documents, the rate per load or lane, and their on-time and claims record.</p><small>Needs Loads</small></div><div class="card" id="dock-bookings"><div class="ch"><b>Dock and yard bookings</b></div><p>Docks per site with opening hours, time slots booked for trucks and collections, worked at the gate, and standing time at the docks.</p><small>Needs Security gate &amp; visitors</small></div><div class="card" id="load-documents"><div class="ch"><b>Load documents</b></div><p>A load confirmation and waybill per load from the company's own template, and the load's POD document with every drop-off.</p><small>Needs Loads and Document templates</small></div><div class="card" id="cross-border"><div class="ch"><b>Cross-border</b></div><p>Loads into other countries: border posts, border routes with any number of crossings (transit countries included), clearing, cargo and crew documents per country, crossing updates from the driver, border waiting times and other currencies.</p><small>Needs Loads</small></div><div class="card" id="rtms-pack"><div class="ch"><b>RTMS audit pack</b></div><p>One pack for a period and site with what an RTMS audit usually asks for (vehicles, drivers, loads and overloads, hours, incidents and claims), prepared to support your RTMS audit.</p><small>Needs Fleet &amp; vehicle checks</small></div></div>
+    </section>
+    <section class="grp" id="fleet">
+      <div class="gh"><h2>Maintenance and fleet</h2><span>5 add-ons</span></div>
+      <p class="gb">Machines, vehicles and the things you issue to people.</p>
+      <div class="cards"><div class="card" id="maintenance"><div class="ch"><b>Maintenance</b></div><p>Machines and equipment, breakdowns and work orders.</p></div><div class="card" id="preventive-maintenance"><div class="ch"><b>Preventive maintenance</b></div><p>Plans by calendar or meter that raise work orders before they are due.</p><small>Needs Maintenance</small></div><div class="card" id="fleet-checks"><div class="ch"><b>Fleet &amp; vehicle checks</b></div><p>Vehicle documents and reminders, checks before use, defects and damage.</p><small>Needs Fuel &amp; vehicles</small></div><div class="card" id="trips"><div class="ch"><b>Trips</b></div><p>Trips with odometer readings, drivers' documents and the driver screen.</p><small>Needs Fleet &amp; vehicle checks</small></div><div class="card" id="assets"><div class="ch"><b>Asset and PPE register</b></div><p>Items issued to people, returns and PPE re-issue dates.</p></div></div>
+    </section>
+    <section class="grp" id="site">
+      <div class="gh"><h2>Site, security and safety</h2><span>11 add-ons</span></div>
+      <p class="gb">The gate, reception, permits and the safety registers.</p>
+      <div class="cards"><div class="card" id="permits-to-work"><div class="ch"><b>Permits to work and contractor induction</b></div><p>Hot work, working at heights, confined space and electrical permits requested, approved, issued and closed. contractors need a valid induction before the gate lets them in.</p></div><div class="card" id="security-gate"><div class="ch"><b>Security gate &amp; visitors</b></div><p>Visitors, the gate log, employees at the gate and the on-site count.</p></div><div class="card" id="contractors"><div class="ch"><b>Contractors</b></div><p>Expected contractors, allow or deny at the gate, the approved contractor list.</p><small>Needs Security gate &amp; visitors</small></div><div class="card" id="trucks"><div class="ch"><b>Trucks</b></div><p>Trucks and other vehicles in and out at the gate.</p><small>Needs Security gate &amp; visitors</small></div><div class="card" id="roll-call"><div class="ch"><b>Emergency roll call</b></div><p>Everyone on site ticked off at the assembly point.</p><small>Needs Security gate &amp; visitors or Attendance and clock-in</small></div><div class="card" id="occurrence-book"><div class="ch"><b>Occurrence book</b></div><p>The security occurrence book: entries by time per shift, handed over and acknowledged by the next guard, a PDF per shift.</p><small>Needs Security gate &amp; visitors</small></div><div class="card" id="reception"><div class="ch"><b>Reception</b></div><p>Visitors at reception, parcels and the staff directory.</p></div><div class="card" id="security-incidents"><div class="ch"><b>Security incidents</b></div><p>The incident register with photos, open to closed.</p></div><div class="card" id="health-safety"><div class="ch"><b>Health &amp; safety</b></div><p>Incidents, near misses and hazards. days without a lost-time injury.</p></div><div class="card" id="ohs-registers"><div class="ch"><b>Health and safety registers</b></div><p>Legal appointments under the OHS Act with letters and expiry reminders. inspection registers for fire equipment, ladders, lifting equipment and pressure vessels.</p><small>Needs Health &amp; safety</small></div><div class="card" id="environment"><div class="ch"><b>Environment</b></div><p>A waste register with manifests and safe disposal certificates. utility meter readings per site with usage per unit produced.</p></div></div>
+    </section>
+    <section class="grp" id="documents">
+      <div class="gh"><h2>Documents</h2><span>8 add-ons</span></div>
+      <p class="gb">The documents you send, in your own layout.</p>
+      <div class="cards"><div class="card" id="document-templates"><div class="ch"><b>Document templates</b></div><p>The company's own layouts for documents it sends: NAEON's standard layout or its own Word template.</p></div><div class="card" id="quote-documents"><div class="ch"><b>Quote documents</b></div><p>The quote made in NAEON from the signed-off request, as PDF and Word.</p><small>Needs Document templates and Sales</small></div><div class="card" id="delivery-documents"><div class="ch"><b>Delivery notes and picking slips</b></div><p>Delivery notes and picking slips from dispatch orders.</p><small>Needs Document templates and Dispatch</small></div><div class="card" id="pod-documents"><div class="ch"><b>POD documents</b></div><p>A proof of delivery document per hand-over, with signature, receiver, photo, place and time.</p><small>Needs Document templates and Proof of delivery</small></div><div class="card" id="conformance-certificates"><div class="ch"><b>Certificates of conformance</b></div><p>Certificates from passed QC inspections, never made by whoever produced the batch.</p><small>Needs Document templates and Quality control</small></div><div class="card" id="job-cards"><div class="ch"><b>Job cards</b></div><p>A job card for each production job.</p><small>Needs Document templates and Production</small></div><div class="card" id="work-order-sheets"><div class="ch"><b>Work order sheets</b></div><p>A work order sheet for each maintenance work order.</p><small>Needs Document templates and Maintenance</small></div><div class="card" id="purchase-orders"><div class="ch"><b>Purchase orders</b></div><p>Purchase orders to suppliers from approved purchase requests (not a tax document).</p><small>Needs Document templates and Procurement &amp; purchase orders</small></div></div>
+    </section>
+    <section class="grp" id="together">
+      <div class="gh"><h2>Working together and reporting</h2><span>12 add-ons</span></div>
+      <p class="gb">Tasks, messages, search, exports and the management view.</p>
+      <div class="cards"><div class="card" id="management-pulse"><div class="ch"><b>Management pulse</b></div><p>A live management home built from the switched-on add-ons.</p></div><div class="card" id="cross-alerts"><div class="ch"><b>Cross-department alerts</b></div><p>Rules that tell the right people when something needs them.</p></div><div class="card" id="tasks"><div class="ch"><b>Tasks</b></div><p>Tasks for yourself and your team, linked to records.</p></div><div class="card" id="messages"><div class="ch"><b>Messages and comments</b></div><p>Comments with @mentions on records, direct and group messages.</p></div><div class="card" id="announcements"><div class="ch"><b>Announcements</b></div><p>News for everyone, a site, a department, a role or a shift team, with read receipts.</p></div><div class="card" id="global-search"><div class="ch"><b>Global search</b></div><p>One search box across customers, quotes, people, tasks and vehicles.</p></div><div class="card" id="data-exports"><div class="ch"><b>Data exports</b></div><p>Excel and CSV exports of every list and report.</p></div><div class="card" id="scheduled-reports"><div class="ch"><b>Scheduled reports</b></div><p>Reports or the company dashboard emailed to the person on a schedule, with a summary, a link and an Excel or PDF file where they may export.</p></div><div class="card" id="full-export"><div class="ch"><b>Full company export</b></div><p>Every record and file in one zipped download for administrators.</p></div><div class="card" id="approval-delegation"><div class="ch"><b>Approval delegation</b></div><p>A deputy approves while you are away.</p></div><div class="card" id="approval-reminders"><div class="ch"><b>Reminders and escalation</b></div><p>Reminders for approvals left waiting, then management is told.</p></div><div class="card" id="practice-company"><div class="ch"><b>Practice company</b></div><p>A copy of the company with sample data for training (set up by NAEON).</p></div></div>
+    </section>
+    <section class="grp" id="ai">
+      <div class="gh"><h2>AI and messaging</h2><span>4 add-ons</span></div>
+      <p class="gb">Optional extras that read slips, answer questions and send alerts.</p>
+      <div class="cards"><div class="card" id="whatsapp"><div class="ch"><b>WhatsApp alerts</b><span class="t soon">Coming soon</span><span class="t use">Usage-based</span></div><p>Activation codes, approvals and urgent alerts for staff on WhatsApp.</p></div><div class="card" id="ai-fuel-slips"><div class="ch"><b>AI fuel slip reading</b><span class="t use">Usage-based</span></div><p>Amount, litres, date and station read from the slip photo.</p><small>Needs Expenses and Fuel &amp; vehicles</small></div><div class="card" id="ask-naeon"><div class="ch"><b>Ask NAEON</b><span class="t use">Usage-based</span></div><p>Questions about your company's figures, answered with links to the records.</p></div><div class="card" id="ai-weekly-summary"><div class="ch"><b>AI weekly summary</b><span class="t use">Usage-based</span></div><p>A short Monday summary of last week for management.</p></div></div>
+    </section>
+
+    <section class="grp end">
+      <div class="cta-box">
+        <div><h2>See it working for a company like yours</h2><p>We'll show you a live demo company and switch between roles, then set up a 7-day trial for your team.</p></div>
+        <div class="cta"><a class="btn btn-grad" href="index.html#contact">Book a demo</a><a class="btn btn-secondary" href="https://app.naeon.co.za/try">I have a trial code</a></div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="y">2026</span> NAEON (Pty) Ltd. All rights reserved.</span>
+    <nav class="legal-links" aria-label="Legal"><a href="/privacy/">Privacy Policy</a><a href="/paia/">PAIA Manual</a><a href="/legal/">Website Terms</a><a href="/legal/#cookies">Cookie Notice</a></nav>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
