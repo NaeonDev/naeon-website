@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NAEON · The operations CRM for companies that make, move and sell</title>
-<meta name="description" content="NAEON is the CRM that runs your whole operation: sales, approvals, stock, dispatch, field reps, the gate and your people, with a clear trail behind every step. Switch on only what you need.">
+<meta name="description" content="NAEON is the CRM that runs your whole operation: sales, approvals, stock, production, dispatch, loads and drivers, the gate and your people, with a clear trail behind every step. Switch on only what you need.">
 <link rel="canonical" href="https://naeon.co.za/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://naeon.co.za/">
@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"NAEON","applicationCategory":"BusinessApplication","operatingSystem":"Web, iOS, Android, Windows, macOS","url":"https://naeon.co.za/","description":"The operations CRM for companies that make, move and sell."}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"NAEON","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://naeon.co.za/","description":"The operations CRM for companies that make, move and sell."}
 </script>
 <style>
 :root{
@@ -117,6 +117,39 @@ h2{font-size:clamp(28px,4vw,42px);line-height:1.12;font-weight:800;letter-spacin
 .p-add{background:rgba(157,173,191,.12);color:var(--text2)}
 .p-soon{background:rgba(245,185,66,.14);color:var(--amber)}
 
+.addons.cats{grid-template-columns:repeat(3,1fr);gap:14px}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.cat.core{border-color:rgba(22,119,255,.55);background:linear-gradient(160deg,rgba(22,119,255,.12),var(--card) 60%)}
+.cat-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:10px}
+.cat-h b{font-size:16px}.cat-h small{color:var(--muted);font-size:13px;white-space:nowrap}
+.cat ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.cat li{font-size:13px;color:var(--text2);background:rgba(157,173,191,.08);border:1px solid rgba(38,58,80,.8);border-radius:999px;padding:3px 10px}
+.cat li.soon{color:var(--amber);border-color:rgba(245,185,66,.35);background:rgba(245,185,66,.08)}
+.cat li.more{color:var(--cyan);background:none;border-style:dashed}
+
+/* mock screens */
+.mock{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 24px 60px rgba(0,0,0,.4);font-size:14px}
+.mock-h{display:flex;justify-content:space-between;align-items:center;padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.mock-h small{display:block;color:var(--muted);font-size:12px}.mock-h b{font-size:17px}
+.pill2.amber{background:rgba(245,185,66,.14);color:var(--amber)}
+.mock-steps{display:grid;gap:8px}
+.ms{display:grid;grid-template-columns:14px 1fr auto;gap:12px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:10px;color:var(--text2)}
+.ms i,.rs i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.ms em,.rs small{font-style:normal;font-size:12px;color:var(--muted)}
+.ms.done i,.rs.done i{background:var(--green)}.ms.done span{color:var(--text)}
+.ms.now{border-color:rgba(22,119,255,.6);background:rgba(22,119,255,.08);color:var(--text)}.ms.now i,.rs.now i{background:var(--blue);box-shadow:0 0 0 4px rgba(22,119,255,.22)}
+.mock-kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.mock-kpi div{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.mock-kpi b{display:block;font-size:18px}.mock-kpi small{color:var(--muted);font-size:12px}
+.mock-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.mock-btns span{display:flex;align-items:center;justify-content:center;height:44px;border-radius:10px;background:var(--blue);font-weight:600}
+.mock-btns span+span{background:none;border:1px solid var(--line);color:var(--text2)}
+.route{display:grid;gap:0;position:relative}
+.rs{display:grid;grid-template-columns:14px 1fr;gap:14px;padding:10px 0;position:relative}
+.rs i{margin-top:6px;position:relative;z-index:1}
+.rs:not(:last-child):before{content:"";position:absolute;left:4px;top:22px;bottom:-6px;width:2px;background:var(--line)}
+.rs b{display:block;font-size:14px;font-weight:600}.rs small{display:block}
+
 /* trail */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .trail{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
@@ -180,7 +213,7 @@ details p{color:var(--text2);font-size:15px;padding:0 0 20px}
 .demo-list li{display:flex;gap:10px}.demo-list li:before{content:"✓";color:var(--green);font-weight:800}
 
 footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--muted);font-size:14px}
-.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:28px}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:28px}
 .foot h4{color:var(--text);font-size:14px;margin-bottom:10px}
 .foot a{display:block;color:var(--text2);margin-bottom:6px}
 .legal{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
@@ -189,7 +222,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--muted);f
 @media (max-width:980px){
   .feat,.split,.contact{grid-template-columns:1fr;gap:36px}
   .feat.rev .txt{order:0}
-  .addons{grid-template-columns:repeat(2,1fr)}
+  .addons,.addons.cats{grid-template-columns:repeat(2,1fr)}
   .inds,.steps{grid-template-columns:1fr 1fr}
   .dl{grid-template-columns:repeat(2,1fr)}
   .dl .web{grid-column:1/-1}
@@ -199,7 +232,8 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--muted);f
 }
 @media (max-width:640px){
   .links a.l,.links .btn-ghost{display:none}
-  .addons,.inds,.steps{grid-template-columns:1fr}
+  .addons,.addons.cats,.inds,.steps{grid-template-columns:1fr}
+  .mock-kpi b{font-size:15px}
   .strip .wrap{grid-template-columns:1fr}
   .hero{padding-top:56px}
   section{padding:68px 0}
@@ -233,12 +267,12 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--muted);f
     <div class="wrap">
       <div class="eyebrow"><span class="bars"><i></i><i></i><i></i></span>The operations CRM · Made in South Africa</div>
       <h1>The CRM that runs your <span class="gt">whole operation.</span></h1>
-      <p class="lead">From the sales rep on the road to the truck at the gate. NAEON brings sales, approvals, stock, dispatch, your field team and your people into one app, with a clear record of who did what, and when.</p>
+      <p class="lead">From the sales rep on the road to the truck at the border. NAEON brings sales, approvals, stock, production, dispatch, loads and drivers, the gate and your people into one app, with a clear record of who did what, and when.</p>
       <div class="cta">
         <a class="btn btn-grad" href="#contact">Book a demo</a>
         <a class="btn btn-secondary" href="how-it-works.html">How NAEON works</a>
       </div>
-      <p class="small">Switch on only what you need. Works on phone, tablet and computer.</p>
+      <p class="small">Switch on only what you need. Works on phone, tablet and computer. Have a trial code? <a href="https://app.naeon.co.za/try">Start your trial</a>.</p>
 
       <div class="stage">
         <div class="browser">
@@ -317,17 +351,66 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--muted);f
         <div class="txt">
           <span class="tag">Field team &amp; the gate</span>
           <h3>Reps on the road, visitors at the gate, all accounted for</h3>
-          <p>Kilometres travelled while clocked in, fuel slips photographed on the spot, and a gate that knows who's on site.</p>
+          <p>Kilometres travelled while clocked in, fuel slips photographed on the spot, and a gate that knows who's on site and whether they're allowed in.</p>
           <ul>
-            <li>Rep tracking only while clocked in</li>
+            <li>Rep tracking only while clocked in, with visit plans</li>
             <li>Fuel slips and mileage captured per vehicle</li>
-            <li>Visitors logged at the gate, with reception notified</li>
-            <li>Emergency roll call in one tap</li>
+            <li>Visitors, contractors, trucks and collections at the gate</li>
+            <li>Permits to work, safety registers and roll call in one tap</li>
           </ul>
         </div>
         <div class="duo">
           <div class="shot"><img src="img/gate-desk.jpg" width="1600" height="1000" loading="lazy" alt="NAEON security gate: visitors, contractors and trucks on site"></div>
           <div class="phone"><img src="img/fuel.jpg" width="780" height="1560" loading="lazy" alt="Logging a fuel slip on a rep's phone"></div>
+        </div>
+      </div>
+
+      <div class="feat">
+        <div class="txt">
+          <span class="tag">Production &amp; quality</span>
+          <h3>The factory floor, on a shared tablet</h3>
+          <p>Operators tap in with their employee number and PIN. Each job shows its steps, work instructions and current drawing, and output, scrap and downtime go in as they happen. Output and scrap are kept even when the Wi-Fi drops.</p>
+          <ul>
+            <li>Production jobs, routings and capacity per line and shift</li>
+            <li>QC inspections, quality holds and corrective actions</li>
+            <li>Breakdowns, work orders and preventive maintenance</li>
+            <li>Batch and serial traceability from receiving to dispatch</li>
+          </ul>
+        </div>
+        <div class="mock" aria-hidden="true">
+          <div class="mock-h"><div><small>Line 2 · Day shift</small><b>Job JB-01184</b></div><span class="pill2">Running</span></div>
+          <div class="mock-steps">
+            <div class="ms done"><i></i><span>Cut to length</span><em>Done</em></div>
+            <div class="ms done"><i></i><span>Weld frame</span><em>Done</em></div>
+            <div class="ms now"><i></i><span>Paint and cure</span><em>Step 3 of 4</em></div>
+            <div class="ms"><i></i><span>QC inspection</span><em>QC point</em></div>
+          </div>
+          <div class="mock-kpi"><div><b>412</b><small>Good units</small></div><div><b>6</b><small>Scrap</small></div><div><b>18 min</b><small>Downtime</small></div></div>
+          <div class="mock-btns"><span>Record output</span><span>Report a breakdown</span></div>
+        </div>
+      </div>
+
+      <div class="feat rev">
+        <div class="txt">
+          <span class="tag">Logistics &amp; transport</span>
+          <h3>Every load, from booking to POD, across any border</h3>
+          <p>Plan loads onto trucks, trailers and drivers, follow them live, and share a track-and-trace link with your customer. The driver's phone does the rest: status updates, proof of collection and delivery, and a Navigate button.</p>
+          <ul>
+            <li>Load planning, rate cards, fuel surcharge and profit per load</li>
+            <li>Cross-border loads with border posts, clearing and crew documents</li>
+            <li>Driver hours, behaviour scores and a panic button</li>
+            <li>Fines, claims, tyres, diesel and an RTMS audit pack</li>
+          </ul>
+        </div>
+        <div class="mock" aria-hidden="true">
+          <div class="mock-h"><div><small>Live board · Today</small><b>Load LD-20931</b></div><span class="pill2 amber">At border</span></div>
+          <div class="route">
+            <div class="rs done"><i></i><div><b>Collected · Johannesburg depot</b><small>06:10 · proof of collection, 22 pallets</small></div></div>
+            <div class="rs done"><i></i><div><b>Departed · seal 448210</b><small>06:42</small></div></div>
+            <div class="rs now"><i></i><div><b>Beitbridge border post</b><small>Arrived 13:55 · clearing in progress</small></div></div>
+            <div class="rs"><i></i><div><b>Deliver · Harare</b><small>Estimated arrival tomorrow 09:30</small></div></div>
+          </div>
+          <div class="mock-kpi"><div><b>7 h 40</b><small>Driving today</small></div><div><b>92</b><small>Driver score</small></div><div><b>On time</b><small>Estimate</small></div></div>
         </div>
       </div>
     </div>
@@ -338,30 +421,23 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--muted);f
     <div class="wrap">
       <div class="kicker">Build your NAEON</div>
       <h2>Start with what you need. Add the rest when you're ready.</h2>
-      <p class="sub">Every module is optional. Switch features on or off at any time, and NAEON changes with your company instead of the other way round.</p>
-      <div class="addons">
-        <div class="addon core"><span class="pill p-core">Core</span><b>Sales &amp; customers</b><span>Leads, quotes, orders, targets</span></div>
-        <div class="addon core"><span class="pill p-core">Core</span><b>Approvals inbox</b><span>One place for every sign-off</span></div>
-        <div class="addon core"><span class="pill p-core">Core</span><b>People &amp; HR</b><span>Leave, expenses, HR files, policies</span></div>
-        <div class="addon core"><span class="pill p-core">Core</span><b>Management pulse</b><span>Every department at a glance</span></div>
-        <div class="addon"><span class="pill p-add">Add-on</span><b>Price agreements</b><span>Agreed prices per customer</span></div>
-        <div class="addon"><span class="pill p-add">Add-on</span><b>Contact log &amp; complaints</b><span>Customer timeline and escalation</span></div>
-        <div class="addon"><span class="pill p-add">Add-on</span><b>Rep tracking</b><span>Kilometres and visits</span></div>
-        <div class="addon"><span class="pill p-add">Add-on</span><b>Fuel &amp; travel</b><span>Fuel slips and mileage</span></div>
-        <div class="addon"><span class="pill p-add">Add-on</span><b>Procurement</b><span>Purchases, suppliers, receiving</span></div>
-        <div class="addon"><span class="pill p-add">Add-on</span><b>Warehouse &amp; dispatch</b><span>Stock, picking, loading</span></div>
-        <div class="addon"><span class="pill p-add">Add-on</span><b>Proof of delivery</b><span>Signatures and photos</span></div>
-        <div class="addon"><span class="pill p-add">Add-on</span><b>Security gate</b><span>Visitors, contractors, trucks</span></div>
-        <div class="addon"><span class="pill p-add">Add-on</span><b>Reception</b><span>Visitors and parcels</span></div>
-        <div class="addon"><span class="pill p-add">Add-on</span><b>Health &amp; safety</b><span>Incidents and roll call</span></div>
-        <div class="addon"><span class="pill p-add">Add-on</span><b>Announcements</b><span>With read receipts</span></div>
-        <div class="addon"><span class="pill p-add">Add-on</span><b>AI &amp; WhatsApp</b><span>Slip reading, alerts, summaries</span></div>
-        <div class="addon"><span class="pill p-soon">Coming soon</span><b>Production &amp; quality</b><span>Runs, QC and maintenance</span></div>
-        <div class="addon"><span class="pill p-soon">Coming soon</span><b>Shifts &amp; training</b><span>Shift planning, training matrix</span></div>
-        <div class="addon"><span class="pill p-soon">Coming soon</span><b>Fleet checks &amp; trips</b><span>Vehicle checks and trip logs</span></div>
-        <div class="addon"><span class="pill p-soon">Coming soon</span><b>Logistics</b><span>For transport companies</span></div>
+      <p class="sub">Every company gets the core. Everything else is one of 129 add-ons you switch on or off at any time, so NAEON changes with your company instead of the other way round.</p>
+      <div class="addons cats">
+        <div class="cat core"><div class="cat-h"><b>Core</b><small>Every company</small></div><ul><li>Sign-in for everyone</li><li>Roles and permissions</li><li>Departments and sites</li><li>The approvals inbox</li><li>A trail behind every entry</li><li>Notifications</li><li>Your company, your look</li><li>Profile and devices</li></ul></div>
+        <div class="cat"><div class="cat-h"><b>Sales and customers</b><small>14 add-ons</small></div><ul><li>Sales</li><li>Rep tracking</li><li>Price agreements</li><li>Credit control</li><li>Territories</li><li>Customer health and gone-quiet alerts</li><li class="more"><a href="how-it-works.html#sales">+8 more</a></li></ul></div>
+        <div class="cat"><div class="cat-h"><b>Finance and expenses</b><small>8 add-ons</small></div><ul><li>Finance</li><li>Expenses</li><li>Fuel &amp; vehicles</li><li>Mileage claims</li><li>Department budgets</li><li>Accounting exports</li><li class="more"><a href="how-it-works.html#finance">+2 more</a></li></ul></div>
+        <div class="cat"><div class="cat-h"><b>People and HR</b><small>12 add-ons</small></div><ul><li>Attendance and clock-in</li><li>Leave</li><li>HR files</li><li>Shifts</li><li>Training matrix</li><li>Payroll export file</li><li class="more"><a href="how-it-works.html#people">+6 more</a></li></ul></div>
+        <div class="cat"><div class="cat-h"><b>Procurement and stock</b><small>14 add-ons</small></div><ul><li>Procurement &amp; purchase orders</li><li>Warehouse &amp; stock</li><li>Stock counts</li><li>Batch and lot traceability</li><li>Material planning</li><li>Supplier quotes</li><li class="more"><a href="how-it-works.html#stock">+8 more</a></li></ul></div>
+        <div class="cat"><div class="cat-h"><b>Production and quality</b><small>14 add-ons</small></div><ul><li>Production</li><li>Shared tablets</li><li>Quality control</li><li>Corrective and preventive actions</li><li>Routings</li><li>Job costing</li><li class="more"><a href="how-it-works.html#production">+8 more</a></li></ul></div>
+        <div class="cat"><div class="cat-h"><b>Dispatch and delivery</b><small>3 add-ons</small></div><ul><li>Dispatch</li><li>Proof of delivery</li><li>Customer collections at the gate</li></ul></div>
+        <div class="cat"><div class="cat-h"><b>Logistics and transport</b><small>24 add-ons</small></div><ul><li>Loads</li><li>Load planning</li><li>Customer track-and-trace link</li><li>Cross-border</li><li>Driver hours and fatigue</li><li>RTMS audit pack</li><li class="more"><a href="how-it-works.html#logistics">+18 more</a></li></ul></div>
+        <div class="cat"><div class="cat-h"><b>Maintenance and fleet</b><small>5 add-ons</small></div><ul><li>Maintenance</li><li>Preventive maintenance</li><li>Fleet &amp; vehicle checks</li><li>Trips</li><li>Asset and PPE register</li></ul></div>
+        <div class="cat"><div class="cat-h"><b>Site, security and safety</b><small>11 add-ons</small></div><ul><li>Security gate &amp; visitors</li><li>Contractors</li><li>Permits to work and contractor induction</li><li>Health &amp; safety</li><li>Emergency roll call</li><li>Reception</li><li class="more"><a href="how-it-works.html#site">+5 more</a></li></ul></div>
+        <div class="cat"><div class="cat-h"><b>Documents</b><small>8 add-ons</small></div><ul><li>Quote documents</li><li>Delivery notes and picking slips</li><li>POD documents</li><li>Purchase orders</li><li>Document templates</li><li class="more"><a href="how-it-works.html#documents">+3 more</a></li></ul></div>
+        <div class="cat"><div class="cat-h"><b>Working together and reporting</b><small>12 add-ons</small></div><ul><li>Management pulse</li><li>Tasks</li><li>Messages and comments</li><li>Announcements</li><li>Global search</li><li>Scheduled reports</li><li class="more"><a href="how-it-works.html#together">+6 more</a></li></ul></div>
+        <div class="cat"><div class="cat-h"><b>AI and messaging</b><small>4 add-ons</small></div><ul><li>Ask NAEON</li><li>AI fuel slip reading</li><li>AI weekly summary</li><li class="soon">WhatsApp alerts (soon)</li></ul></div>
       </div>
-      <div style="margin-top:32px"><a class="btn btn-secondary" href="how-it-works.html">See how every feature works &rarr;</a></div>
+      <div style="margin-top:32px"><a class="btn btn-secondary" href="how-it-works.html">See every add-on explained &rarr;</a></div>
     </div>
   </section>
 
@@ -371,7 +447,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--muted);f
       <div>
         <div class="kicker">Fits the way you work</div>
         <h2>Built to run alongside your systems</h2>
-        <p class="sub" style="margin-bottom:34px">NAEON doesn't replace your accounting package. It's where your team records, approves and follows through on the work, and finance takes the approved figures into your own system.</p>
+        <p class="sub" style="margin-bottom:34px">NAEON doesn't replace your accounting package. It's where your team records, approves and follows through on the work, and finance takes the approved figures into your own system with import-ready files and a payroll export.</p>
         <ul class="points">
           <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>A trail behind every entry</b><span>See who created it, who approved it, and whether it was carried out.</span></div></li>
           <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Management sees everything</b><span>One live view across every department, without chasing updates.</span></div></li>
@@ -393,26 +469,25 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--muted);f
     <div class="wrap">
       <div class="kicker">Industries</div>
       <h2>Made for companies that make, move and sell</h2>
-      <p class="sub">If your work involves a sales team, a warehouse, a gate and people in the field, NAEON was built for you.</p>
+      <p class="sub">If your work involves a sales team, a warehouse, a factory floor, a fleet or people in the field, NAEON was built for you. Mixed companies switch on the parts of each.</p>
       <div class="inds">
         <div class="ind">
           <div class="ico"><svg viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M4 20V9l5 3V9l5 3V5h6v15"/></svg></div>
           <h3>Manufacturing</h3>
           <p>Factories with a sales team, raw materials and a production floor.</p>
-          <ul><li>Stock and procurement</li><li>Shop-floor staff on activation codes</li><li>Safety, incidents and roll call</li></ul>
+          <ul><li>Production, quality and maintenance</li><li>Stock, procurement and traceability</li><li>Shared tablets for the shop floor</li><li>Safety, permits and roll call</li></ul>
         </div>
         <div class="ind">
           <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></div>
           <h3>Distribution &amp; wholesale</h3>
           <p>Companies selling and delivering from one or more warehouses.</p>
-          <ul><li>Reps on the road with targets</li><li>Picking, dispatch and proof of delivery</li><li>Price agreements per customer</li></ul>
+          <ul><li>Reps on the road with targets and territories</li><li>Picking, dispatch and proof of delivery</li><li>Price agreements and credit control</li><li>Collections and returnable packaging</li></ul>
         </div>
         <div class="ind">
-          <span class="pill p-soon soon" style="font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px">Coming soon</span>
           <div class="ico"><svg viewBox="0 0 24 24"><path d="M1 6h13v10H1z"/><path d="M14 10h4l3 3v3h-7"/><circle cx="5.5" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></svg></div>
           <h3>Logistics &amp; transport</h3>
-          <p>Fleets, drivers and loads, with vehicle tracker connections.</p>
-          <ul><li>Trips and fleet checks</li><li>Driver apps and delivery proof</li><li>Tracker integration</li></ul>
+          <p>Transporters, and companies running their own trucks, from booking to POD.</p>
+          <ul><li>Load planning and the live board</li><li>Track-and-trace links for customers</li><li>Cross-border loads and subcontractors</li><li>Driver hours, fines, claims and tyres</li></ul>
         </div>
       </div>
     </div>
@@ -425,7 +500,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--muted);f
       <h2>Up and running without the headache</h2>
       <p class="sub">We set NAEON up for you. Your team just signs in.</p>
       <div class="steps">
-        <div class="st"><b>See it working</b><span>A live demo company with every role, so you can see each person's view.</span></div>
+        <div class="st"><b>See it working</b><span>A live demo company with every role, then a 7-day trial for your team with sample data.</span></div>
         <div class="st"><b>Choose your modules</b><span>Pick the add-ons that fit. Change them any time.</span></div>
         <div class="st"><b>We set you up</b><span>Send us your staff list on our template, and we load your company with your logo and colour.</span></div>
         <div class="st"><b>Your team signs in</b><span>Office staff get an email invite. Factory and warehouse staff get a personal activation code.</span></div>
@@ -438,7 +513,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--muted);f
     <div class="wrap">
       <div class="kicker">Download</div>
       <h2>On every device your team uses</h2>
-      <p class="sub">Use NAEON in your browser today. Installable apps for phones and computers are on their way.</p>
+      <p class="sub">Use NAEON in your browser today on any phone, tablet or computer. Phone and desktop apps are on their way.</p>
       <div class="dl">
         <div class="platform web">
           <div class="top"><svg viewBox="0 0 24 24" style="fill:none;stroke:var(--cyan);stroke-width:1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg><div><b>Web app</b><small>Any browser, available now</small></div></div>
@@ -472,10 +547,14 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--muted);f
       <div class="faq" style="margin-top:34px">
         <details><summary>Does NAEON replace our accounting system?</summary><p>No. NAEON runs alongside it. Your team captures and approves work in NAEON, and finance uses the approved figures in your own accounting system. Tax invoices, credit notes and statements stay there.</p></details>
         <details><summary>Can we start with only a few modules?</summary><p>Yes. Every feature beyond the core is an optional add-on. Start small, and switch more on when you're ready. You only pay for what you use.</p></details>
-        <details><summary>Does it work on phones?</summary><p>Yes. NAEON was designed for phones first, for reps, drivers, security and factory staff, and it works just as well on tablets and computers.</p></details>
+        <details><summary>Does it work on phones?</summary><p>Yes. NAEON was designed for phones first, for reps, drivers, security and factory staff, and it works just as well on tablets and computers. Factory floors can share a tablet, with each person tapping in with a PIN.</p></details>
         <details><summary>How do our staff get access?</summary><p>You send us your staff list on our template and we create the accounts. Office staff receive an email invitation; factory and warehouse staff get a personal activation code. Management sign in with two-factor authentication.</p></details>
-        <details><summary>Is our data safe?</summary><p>Every company's data is kept strictly separate, and each person only sees what their role allows. You choose how long records like visitor details are kept, and every change is recorded in the trail.</p></details>
-        <details><summary>Are you tracking our reps all the time?</summary><p>No. Rep tracking only records kilometres while someone is clocked in for work, and only when your company switches the add-on on.</p></details>
+        <details><summary>Is our data safe?</summary><p>Every company's data is kept strictly separate, and each person only sees what their role allows. You choose how long records are kept, sensitive views are recorded, and every change is in the trail.</p></details>
+        <details><summary>Are you tracking our reps and drivers all the time?</summary><p>No. Reps are tracked only while they're clocked in, and drivers only while a trip is running, and only when your company switches the add-on on. Before anyone is tracked, they read and acknowledge a tracking notice in the app.</p></details>
+        <details><summary>What if there's no signal?</summary><p>The screens used where the signal drops keep working: the gate, clocking in and out, production output, receiving, and drivers' load updates and proof of delivery. Entries are saved on the device and sent the moment there's signal.</p></details>
+        <details><summary>Where is our data kept?</summary><p>In London, United Kingdom, with every company's data kept apart in the database. Our <a href="/privacy/">Privacy Policy</a> lists every service provider we use.</p></details>
+        <details><summary>Do you use AI on our data?</summary><p>Only if you switch it on. AI fuel-slip reading, Ask NAEON and the weekly summary are optional add-ons that your administrator accepts first, and a person always checks what AI suggests. AI is never on during a trial.</p></details>
+        <details><summary>Can we try it ourselves?</summary><p>Yes. After a demo we can give your team a 7-day trial: your own copy of a demo company with sample data and every role, at app.naeon.co.za/try.</p></details>
         <details><summary>How much does it cost?</summary><p>Pricing depends on your team size and the modules you choose. Get in touch and we'll put together a quote for your company.</p></details>
       </div>
     </div>
@@ -492,7 +571,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--muted);f
           <ul class="demo-list">
             <li>30 minutes, online or at your office</li>
             <li>A quote based on your team and modules</li>
-            <li>Be first in line when NAEON launches</li>
+            <li>A 7-day trial for your team afterwards</li>
           </ul>
         </div>
         <div class="person">
@@ -519,9 +598,10 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--muted);f
       </div>
       <div><h4>Product</h4><a href="#platform">Platform</a><a href="how-it-works.html">How it works</a><a href="#addons">Add-ons</a><a href="#industries">Industries</a><a href="#download">Download</a></div>
       <div><h4>Company</h4><a href="#contact">Book a demo</a><a href="#faq">FAQ</a><a href="https://app.naeon.co.za">Sign in</a></div>
+      <div><h4>Legal</h4><a href="/privacy/">Privacy Policy</a><a href="/paia/">PAIA Manual</a><a href="/legal/">Website Terms</a><a href="/legal/#cookies">Cookie Notice</a></div>
     </div>
     <div class="legal">
-      <span>© <span id="y">2026</span> NAEON. All rights reserved.</span>
+      <span>© <span id="y">2026</span> NAEON (Pty) Ltd. All rights reserved.</span>
       <span>Made in South Africa</span>
     </div>
   </div>
